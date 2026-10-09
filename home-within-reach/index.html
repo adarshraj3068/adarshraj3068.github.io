@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Home Within Reach</title>
+<meta name="description" content="Adarsh Raj's social impact project on affordable housing for low- and middle-income families in India's Tier-II cities.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one long dark page; sticky menu; hero card with photo; then evidence-first sections; Royal Global origin story near the end; tap-to-open certificate gallery. Navy + gold from the LinkedIn banner. */
+:root{
+  --bg:#0a111d; --bg2:#0e1726; --card:#121d30; --card2:#16233a; --line:#22324b;
+  --text:#eef1f6; --muted:#9aa6ba; --dim:#6f7d95;
+  --gold:#d6b46c; --gold2:#b8954a; --goldsoft:rgba(214,180,108,.12); --blue:#8fb0e6;
+  --display:"Fraunces",Georgia,serif; --body:"Manrope",system-ui,-apple-system,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--bg);color:var(--text);font:400 1rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1100px;margin:0 auto;padding-inline:max(16px,4vw)}
+.glow{position:fixed;inset:auto;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0;opacity:.35}
+.glow.a{width:560px;height:560px;background:#1d3a7a;top:-200px;left:-180px}
+.glow.b{width:480px;height:480px;background:#5e4518;top:40%;right:-220px;opacity:.22}
+main,nav,footer{position:relative;z-index:1}
+
+/* nav */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(10,17,29,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:24px;height:60px}
+.brand{font:600 1.1rem var(--display);text-decoration:none;white-space:nowrap}
+.brand span{color:var(--gold)}
+.links{display:flex;gap:20px;overflow-x:auto;scrollbar-width:none;margin-left:auto;mask-image:linear-gradient(90deg,#000 90%,transparent)}
+.links::-webkit-scrollbar{display:none}
+.links a{font:600 .82rem var(--body);color:var(--muted);text-decoration:none;white-space:nowrap;padding:6px 0}
+.links a:hover{color:var(--gold)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:56px;align-items:center;padding-block:80px 64px}
+.eyebrow{font:500 .72rem/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+h1{font:500 clamp(2.6rem,6vw,4.4rem)/1.03 var(--display);letter-spacing:-.02em;margin:16px 0 20px;text-wrap:balance}
+h1 em{color:var(--gold);font-style:italic}
+.lede{color:var(--muted);font-size:1.08rem;max-width:56ch;margin:0}
+.lede b{color:var(--text);font-weight:600}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:12px;font:600 .9rem var(--body);text-decoration:none;border:1px solid var(--line);background:var(--card);transition:transform .2s,border-color .2s,background .2s}
+.btn:hover{transform:translateY(-2px);border-color:var(--gold2)}
+.btn.gold{background:linear-gradient(135deg,#e6c98a,#c39a4b);color:#15110a;border-color:transparent}
+.portrait{position:relative;justify-self:center;width:100%;max-width:300px}
+.portrait .ring{aspect-ratio:1;border-radius:50%;padding:6px;background:conic-gradient(from 200deg,var(--gold),#3b5fb0,var(--gold))}
+.portrait img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;border:6px solid var(--bg)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:48px;padding-top:28px;border-top:1px solid var(--line)}
+.stat b{display:block;font:500 2rem/1.1 var(--display);color:var(--gold);font-variant-numeric:tabular-nums}
+.stat span{font-size:.82rem;color:var(--muted)}
+
+/* sections */
+section{padding-block:72px;border-top:1px solid var(--line);scroll-margin-top:60px}
+.head{margin-bottom:32px;max-width:680px}
+h2{font:500 clamp(1.8rem,3.4vw,2.5rem)/1.12 var(--display);margin:10px 0 8px;text-wrap:balance}
+h2 em{color:var(--gold);font-style:italic}
+.head p{color:var(--muted);margin:0}
+h3{font:600 1.05rem/1.35 var(--body);margin:0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+.card p{color:var(--muted);font-size:.93rem;margin:8px 0 0}
+.meta{font:500 .74rem/1.4 var(--mono);color:var(--dim);margin-top:4px;letter-spacing:.02em}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.pill{display:inline-block;font:600 .68rem var(--body);padding:4px 10px;border-radius:99px;background:var(--goldsoft);color:var(--gold);white-space:nowrap}
+.pill.blue{background:rgba(143,176,230,.12);color:var(--blue)}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+ul.clean{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:8px}
+ul.clean li{color:var(--muted);font-size:.93rem;padding-left:18px;position:relative}
+ul.clean li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:2px;background:var(--gold2)}
+ul.clean b{color:var(--text);font-weight:600}
+
+/* impact */
+.impact{position:relative;overflow:hidden;padding:28px;border-radius:22px;background:linear-gradient(160deg,var(--card2),var(--card));border:1px solid var(--line)}
+.impact h3{font:500 1.6rem/1.2 var(--display);margin-top:14px}
+.impact .sub{color:var(--gold);font-weight:600;font-size:.9rem;margin-top:4px}
+.impact .soon{margin-top:18px;font:500 .76rem var(--mono);color:var(--dim)}
+
+/* research */
+.feature{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:16px}
+.paper.big h3{font:500 1.45rem/1.25 var(--display)}
+dl.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px 0 0}
+dl.facts dt{font:500 .66rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+dl.facts dd{margin:4px 0 0;font:500 1.15rem var(--display);color:var(--gold)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.chips span{font:500 .72rem var(--mono);padding:4px 10px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
+.chips span.q{border-style:dashed;color:var(--gold)}
+
+/* timeline-ish list */
+.list{display:grid;gap:14px}
+.row{display:grid;grid-template-columns:150px minmax(0,1fr);gap:20px}
+.row .when{font:500 .78rem/1.5 var(--mono);color:var(--gold);padding-top:3px}
+
+/* honors */
+.honors{display:grid;gap:12px}
+.honor{display:grid;grid-template-columns:76px minmax(0,1fr);gap:18px;align-items:start}
+.honor .yr{font:500 1.3rem/1 var(--display);color:var(--gold);font-variant-numeric:tabular-nums}
+
+/* medals */
+.medals{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:16px}
+.medal{display:flex;gap:12px;align-items:flex-start;background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:14px}
+.dot{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font:700 .7rem var(--body);color:#15110a}
+.dot.g{background:linear-gradient(135deg,#f1d68f,#c9a04c)}
+.dot.s{background:linear-gradient(135deg,#e7ebf1,#a7b0bd)}
+.dot.b{background:linear-gradient(135deg,#e2a774,#a8683a)}
+.medal b{display:block;font-size:.9rem}
+.medal span{font-size:.8rem;color:var(--muted)}
+
+/* origin */
+.origin{border-radius:24px;padding:36px;background:radial-gradient(120% 120% at 0% 0%,rgba(214,180,108,.14),transparent 55%),var(--card);border:1px solid var(--gold2)}
+.origin .years{font:500 .78rem var(--mono);color:var(--gold);letter-spacing:.08em}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px}
+.gallery button{all:unset;cursor:pointer;display:block;border-radius:14px;overflow:hidden;background:var(--card);border:1px solid var(--line);transition:transform .2s,border-color .2s}
+.gallery button:hover{transform:translateY(-3px);border-color:var(--gold2)}
+.gallery button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.gallery img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#fff}
+.gallery span{display:block;padding:10px 12px;font-size:.78rem;color:var(--muted);line-height:1.35}
+.lb{position:fixed;inset:0;z-index:50;background:rgba(5,9,16,.92);display:grid;place-items:center;padding:24px}
+.lb img{max-width:min(1100px,100%);max-height:80vh;border-radius:10px;background:#fff}
+.lb p{margin:14px 0 0;text-align:center;color:var(--muted);font-size:.9rem}
+.lb .x{position:absolute;top:16px;right:16px;all:unset;cursor:pointer;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--card);border:1px solid var(--line);font-size:1.3rem;color:var(--text)}
+.lb .x{position:absolute;top:16px;right:16px}
+
+/* contact */
+.contact{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.copy{display:flex;gap:8px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px 6px 6px 14px}
+.copy code{font:500 .9rem var(--mono);user-select:all;word-break:break-all}
+.copy button{font:600 .8rem var(--body);padding:8px 12px;border-radius:9px;border:0;background:var(--gold);color:#15110a;cursor:pointer}
+footer{border-top:1px solid var(--line);padding-block:28px;color:var(--dim);font-size:.82rem}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:minmax(0,1fr);gap:32px;padding-block:48px}
+  .portrait{order:-1;max-width:200px;justify-self:start}
+  .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .feature{grid-template-columns:minmax(0,1fr)}
+  .brand{display:none}.links{margin-left:0}
+}
+@media (max-width:620px){
+  .grid2,.grid3{grid-template-columns:minmax(0,1fr)}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .row{grid-template-columns:minmax(0,1fr);gap:4px}
+  .honor{grid-template-columns:58px minmax(0,1fr)}
+  section{padding-block:54px}
+  .origin{padding:24px}
+  dl.facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+.hero.solo{grid-template-columns:minmax(0,1fr);padding-block:72px 40px}
+.big{font:500 2rem/1.1 var(--display);color:var(--gold);font-variant-numeric:tabular-nums}
+.src{display:block;margin-top:8px;font:500 .7rem var(--mono);color:var(--dim)}
+.callout{margin-top:22px;padding:18px 20px;border-radius:16px;border:1px solid var(--gold2);background:var(--goldsoft);color:var(--muted);font-size:.95rem}
+.callout b{color:var(--text)}
+.tablewrap{overflow-x:auto;margin-top:12px}
+table{width:100%;border-collapse:collapse;font-size:.92rem;min-width:420px}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line)}
+th{font:500 .7rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+td{color:var(--muted)} td:first-child{color:var(--text);font-weight:600}
+.steps{display:grid;gap:12px}
+.step{display:grid;grid-template-columns:52px minmax(0,1fr);gap:16px;align-items:start}
+.step .n{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font:600 1.2rem var(--display);color:#15110a;background:linear-gradient(135deg,#e6c98a,#c39a4b)}
+.n2{font:500 .72rem var(--mono);color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+.calc{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:24px}
+.inputs{display:grid;gap:12px}
+.inputs label{display:grid;gap:6px;font-size:.85rem;color:var(--muted)}
+.inputs input{font:500 1rem var(--body);padding:11px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg2);color:var(--text);width:100%}
+.inputs input:focus{outline:2px solid var(--gold);outline-offset:1px}
+.out{display:grid;gap:10px;align-content:start}
+.out div{display:flex;justify-content:space-between;gap:12px;padding:12px 14px;border-radius:12px;background:var(--bg2);border:1px solid var(--line)}
+.out span{color:var(--muted);font-size:.88rem}
+.out b{font-variant-numeric:tabular-nums}
+.out .hl{border-color:var(--gold2);background:var(--goldsoft)}
+.out .hl b{color:var(--gold);font:500 1.3rem var(--display)}
+.out p{margin:4px 0 0;font-size:.85rem;color:var(--muted)}
+ol.refs{color:var(--muted);font-size:.9rem;display:grid;gap:8px;padding-left:20px;margin:0}
+ol.refs a{color:var(--gold)}
+footer a{color:var(--gold)}
+@media (max-width:760px){.calc{grid-template-columns:minmax(0,1fr)}}
+
+body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<div class="glow a" aria-hidden="true"></div><div class="glow b" aria-hidden="true"></div>
+<nav aria-label="Sections"><div class="wrap">
+  <a class="brand" href="../">Adarsh <span>Raj</span></a>
+  <div class="links">
+    <a href="#gap">The gap</a><a href="#field">Fieldwork</a><a href="#costs">Costs</a><a href="#policy">Policy</a><a href="#framework">Framework</a><a href="#calculator">Calculator</a><a href="#market">Listings</a><a href="#next">Next</a><a href="#sources">Sources</a><a href="../">← Main site</a>
+  </div>
+</div></nav>
+
+<main>
+<div class="wrap">
+  <header class="hero solo">
+    <div>
+      <div class="eyebrow">Social Impact Project · Siliguri · 2026</div>
+      <h1>Home <em>Within Reach</em></h1>
+      <p class="lede">How mid-sized developers in India's Tier-II cities can build homes that <b>lower-middle-income families can actually buy</b>, and still make the numbers work.</p>
+      <div class="ctas"><span class="pill">In progress · full launch 1 November 2026</span></div>
+    </div>
+  </header>
+  <div class="stats" role="list">
+    <div class="stat" role="listitem"><b>3</b><span>Developer conversations</span></div>
+    <div class="stat" role="listitem"><b>8–10</b><span>Buyer & tenant conversations</span></div>
+    <div class="stat" role="listitem"><b>3</b><span>Site visits</span></div>
+    <div class="stat" role="listitem"><b>1</b><span>Developer framework</span></div>
+  </div>
+</div>
+
+<section id="gap"><div class="wrap">
+  <div class="head"><div class="eyebrow">The problem</div><h2>The missing <em>middle</em></h2><p>During my internship with a Siliguri developer, almost every private project I benchmarked was aimed at upper-middle or premium buyers. Families earning a working wage were left choosing between informal housing and nothing.</p></div>
+  <div class="grid3">
+    <div class="card"><div class="big">9.4 mn</div><p>Urban affordable housing shortage in India, August 2025. <span class="src">Knight Frank, 2025</span></p></div>
+    <div class="card"><div class="big">52% → 17%</div><p>Affordable housing's share of new supply, 2018 to 2025. <span class="src">Knight Frank, 2025</span></p></div>
+    <div class="card"><div class="big">43% → 60%</div><p>EMI as a share of income for an EWS household, 2020 to 2025. <span class="src">Knight Frank, 2025</span></p></div>
+  </div>
+  <h3 style="margin-top:32px">Who is left out</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Group (PMAY-U 2.0)</th><th>Annual household income</th><th>Roughly per month</th></tr></thead>
+    <tbody>
+      <tr><td>EWS</td><td>Up to ₹3 lakh</td><td>Up to ₹25,000</td></tr>
+      <tr><td>LIG</td><td>₹3–6 lakh</td><td>₹25,000–50,000</td></tr>
+      <tr><td>MIG</td><td>₹6–9 lakh</td><td>₹50,000–75,000</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout"><b>What I saw in Siliguri:</b> informal homes sell for under ₹15 lakh, often without secure title or basic safety. Formal private apartments start around ₹45–50 lakh. Very little sits in the <b>₹20–35 lakh</b> range. <span class="src">My field observation, 2025–26</span></div>
+  <div class="callout"><b>Who this is for.</b> A ₹20–35 lakh home needs a household income of roughly <b>₹55,000–90,000 a month</b> (30% of income on the EMI, 8.5% interest, 20 years, 10% down; try it in the calculator below). That is the MIG band and households just above it. PMAY's interest subsidy stops at ₹9 lakh a year (₹75,000 a month), and at that income the same assumptions reach about ₹29 lakh, so the realistic sweet spot for a subsidised buyer is <b>₹20–29 lakh</b>. LIG families, earning roughly ₹25,000–50,000 a month, can reach only about ₹10–19 lakh and need rental or government-built housing, not a private developer. This project focuses on the band a private developer can realistically serve.</div>
+</div></section>
+
+<section id="different"><div class="wrap">
+  <div class="head"><div class="eyebrow">Scope</div><h2>How this differs from <em>my research paper</em></h2></div>
+  <div class="grid2">
+    <div class="card"><span class="pill blue">Research paper</span><h3 style="margin-top:12px">What drives prices</h3><p>A comparative study of infrastructure, connectivity and housing prices across five Tier-II cities. It explains <b style="color:var(--text)">why</b> prices move. <a href="https://www.iosrjournals.org/iosr-jef/papers/Vol17-Issue3/Ser-1/O170301120195.pdf" target="_blank" rel="noopener">Read it (IOSR-JEF, 2026) ↗</a></p></div>
+    <div class="card"><span class="pill">This project</span><h3 style="margin-top:12px">What developers can do about it</h3><p>An applied framework for mid-sized developers, grounded in Siliguri. It asks <b style="color:var(--text)">what to build, at what price, and how buyers pay for it</b>.</p></div>
+  </div>
+</div></section>
+
+<section id="field"><div class="wrap">
+  <div class="head"><div class="eyebrow">Fieldwork</div><h2>What I <em>heard on the ground</em></h2><p>All in and around Siliguri, during and after my 2025 internship with a local residential developer.</p></div>
+  <div class="grid2">
+    <div class="card"><h3>From developers and project managers (3)</h3><ul class="clean">
+      <li><b>Land</b> is the cost they control least, and it decides which buyers a project can serve.</li>
+      <li><b>Approval delays</b> add holding costs that end up in the price.</li>
+      <li>Mid-sized developers rarely use PMAY's <b>Affordable Housing in Partnership</b> route: the paperwork, slow land approvals and price caps squeeze margins too far.</li>
+    </ul></div>
+    <div class="card"><h3>From families, tenants and wage earners (8–10)</h3><ul class="clean">
+      <li>Most want the <b>EMI under about 30%</b> of monthly income.</li>
+      <li><b>Location and transport</b> matter more than amenities.</li>
+      <li>They'll trade a clubhouse or pool for <b>reliable water, power and security</b>.</li>
+    </ul></div>
+  </div>
+  <p style="color:var(--dim);font-size:.85rem;margin:16px 0 0">Conversations were informal and are summarised, not quoted. Names are not published.</p>
+</div></section>
+
+<section id="costs"><div class="wrap">
+  <div class="head"><div class="eyebrow">The numbers</div><h2>Where the <em>money goes</em></h2></div>
+  <div class="grid3">
+    <div class="card"><div class="big">40–50%</div><p>Land cost relative to construction cost, the single biggest lever on price. <span class="src">Knight Frank, 2025</span></p></div>
+    <div class="card"><div class="big">~₹2,070</div><p>Per sq ft for basic construction in Siliguri, excluding land and fees. <span class="src">Online construction-cost estimate for Siliguri, 2026</span></p></div>
+    <div class="card"><div class="big">₹3,604</div><p>Per sq ft for standard-plus construction in India's top seven cities, up 34% since 2021. <span class="src">Anarock, 2026</span></p></div>
+  </div>
+  <div class="callout"><b>Design is a cost lever.</b> A study of Indian affordable housing found that as the ratio of built-up area to carpet area rose from 1.30 to 1.62, construction cost rose from about ₹13,400 to ₹20,100 per m² of usable carpet area. Less corridor and wasted space means more home per rupee. <span class="src">Bansal et al., Advances in Civil Engineering, 2021</span></div>
+</div></section>
+
+<section id="policy"><div class="wrap">
+  <div class="head"><div class="eyebrow">Policy</div><h2>PMAY-U 2.0, <em>in practice</em></h2><p>The government's urban housing scheme has four parts. Only some of them reach a private developer's buyers.</p></div>
+  <div class="grid2">
+    <div class="card"><span class="pill">Most useful</span><h3 style="margin-top:12px">Interest Subsidy Scheme (ISS)</h3><ul class="clean">
+      <li>Up to <b>₹1.8 lakh</b> subsidy on a home loan for EWS, LIG and MIG families</li>
+      <li>Loan up to <b>₹25 lakh</b>, home value up to <b>₹35 lakh</b>, carpet area up to 120 m²</li>
+      <li>This lines up exactly with the <b>₹20–35 lakh</b> gap above</li>
+    </ul></div>
+    <div class="card"><span class="pill blue">Rarely used by mid-sized developers</span><h3 style="margin-top:12px">Affordable Housing in Partnership (AHP)</h3><ul class="clean">
+      <li>Mixed projects need at least <b>25% EWS units</b> and at least 100 EWS homes</li>
+      <li>Developers I spoke to found the approvals and price caps hard to make viable</li>
+      <li>Also: a <b>Technology Innovation Grant</b> of ₹1,000 per m² for new construction methods</li>
+    </ul></div>
+  </div>
+  <p style="color:var(--dim);font-size:.85rem;margin:16px 0 0">The other two parts, Beneficiary Led Construction and Affordable Rental Housing, mostly serve families building on their own land or renting, not private developers' buyers. Floor-area (FAR) incentives come from state and city building rules, not PMAY itself.</p>
+</div></section>
+
+<section id="framework"><div class="wrap">
+  <div class="head"><div class="eyebrow">The output</div><h2>The Home Within Reach <em>Developer Framework</em></h2><p>Three moves a mid-sized developer can make without waiting for a government partnership.</p></div>
+  <div class="steps">
+    <div class="card step"><div class="n">1</div><div><h3>Design for usable space</h3><p>Compact 1BHK and 2BHK plans that cut corridors, oversized balconies and dead space, lowering the built-up to carpet ratio so more of every rupee becomes living area.</p></div></div>
+    <div class="card step"><div class="n">2</div><div><h3>Price to the ₹35 lakh line</h3><p>Keep units under PMAY-U 2.0's ₹35 lakh ISS cap so buyers qualify for the interest subsidy, and use state FAR incentives and the Technology Innovation Grant where they apply.</p></div></div>
+    <div class="card step"><div class="n">3</div><div><h3>Essentials over amenities, and flexible payment</h3><p>Spend on water, power, security and transit access rather than a clubhouse, and offer payment plans that keep the EMI under about 30% of a family's income.</p></div></div>
+  </div>
+  <div class="callout"><b>Next: developer feedback.</b> I will present this framework to a Siliguri residential developer before launch and publish their main objections here.</div>
+</div></section>
+
+<section id="calculator"><div class="wrap">
+  <div class="head"><div class="eyebrow">Try it</div><h2>What can a family <em>afford?</em></h2><p>Enter a household's monthly income. The calculator keeps the EMI at the share of income you choose and works out the most expensive home they could buy.</p></div>
+  <div class="calc card">
+    <div class="inputs">
+      <label for="inc">Monthly household income (₹)<input id="inc" type="number" inputmode="numeric" min="5000" step="1000" value="70000"></label>
+      <label for="share">EMI as % of income<input id="share" type="number" min="10" max="50" step="1" value="30"></label>
+      <label for="rate">Loan interest rate (% per year)<input id="rate" type="number" min="5" max="15" step="0.1" value="8.5"></label>
+      <label for="yrs">Loan tenure (years)<input id="yrs" type="number" min="5" max="30" step="1" value="20"></label>
+      <label for="dp">Down payment (% of price)<input id="dp" type="number" min="0" max="50" step="1" value="10"></label>
+    </div>
+    <div class="out" aria-live="polite">
+      <div><span>Affordable EMI</span><b id="oEmi">–</b></div>
+      <div><span>Maximum loan</span><b id="oLoan">–</b></div>
+      <div class="hl"><span>Maximum home price</span><b id="oPrice">–</b></div>
+      <p id="oNote"></p>
+    </div>
+  </div>
+  <p style="color:var(--dim);font-size:.85rem;margin:14px 0 0">An illustration, not financial advice. It ignores the ISS subsidy itself, registration and other costs.</p>
+</div></section>
+
+<section id="market"><div class="wrap">
+  <div class="head"><div class="eyebrow">Original data · in progress</div><h2>What Siliguri <em>actually lists</em></h2><p>A scan of 30–50 current Siliguri apartment listings (price, carpet area, locality, configuration) from public property portals, to test my field observation that almost nothing sits between ₹20 and ₹35 lakh.</p></div>
+  <div class="callout" style="margin:0"><b>Collecting now.</b> The chart and table go here by 20 October 2026. If the data shows the gap is smaller than I thought, this page will say so.</div>
+</div></section>
+
+<section id="next"><div class="wrap">
+  <div class="head"><div class="eyebrow">Status</div><h2>What's <em>next</em></h2></div>
+  <div class="list">
+    <div class="row"><div class="when">By 20 Oct 2026</div><div class="card"><p style="margin:0">Finish the listings scan and turn the developer and buyer conversations into the final findings and graphics.</p></div></div>
+    <div class="row"><div class="when">By 25 Oct 2026</div><div class="card"><p style="margin:0">Present the framework to a Siliguri developer and add their feedback.</p></div></div>
+    <div class="row"><div class="when">1 Nov 2026</div><div class="card"><p style="margin:0">Full launch, and presentation to my counsellor.</p></div></div>
+  </div>
+</div></section>
+
+<section id="sources"><div class="wrap">
+  <div class="head"><div class="eyebrow">Sources</div><h2>References</h2></div>
+  <ol class="refs">
+    <li>Knight Frank, <i>India Affordable Housing</i>, 2025. <a href="https://content.knightfrank.com/research/3035/documents/en/india-affordable-housing-2025-12385.pdf" target="_blank" rel="noopener">Report (PDF)</a></li>
+    <li>Ministry of Housing and Urban Affairs, <i>PMAY-U 2.0 FAQ</i>. <a href="https://pmaymis.gov.in/pmaymis2_2024/faq.html" target="_blank" rel="noopener">pmaymis.gov.in</a></li>
+    <li>Anarock, construction cost and housing price analysis, Sept 2026, via <a href="https://www.business-standard.com/industry/news/india-housing-prices-construction-costs-top-seven-cities-anarock-126090300706_1.html" target="_blank" rel="noopener">Business Standard</a></li>
+    <li>Bansal et al., "Reduction of Embodied Energy and Construction Cost of Affordable Houses through Efficient Architectural Design", <i>Advances in Civil Engineering</i>, 2021. <a href="https://onlinelibrary.wiley.com/doi/10.1155/2021/5693101" target="_blank" rel="noopener">Wiley</a></li>
+    <li>House construction cost estimate for Siliguri, 2026. <a href="https://indialandconverter.in/construction-cost/west-bengal/siliguri" target="_blank" rel="noopener">indialandconverter.in</a></li>
+    <li>Author's field conversations and site visits, Siliguri, 2025–26.</li>
+  </ol>
+</div></section>
+</main>
+
+<footer><div class="wrap">Home Within Reach · a project by <a href="../">Adarsh Raj</a> · <span id="yr">2026</span></div></footer>
+
+<script>
+(function(){
+  function f(n){return '₹'+Math.round(n).toLocaleString('en-IN');}
+  function lakh(n){return '₹'+(n/100000).toFixed(1)+' lakh';}
+  var ids=['inc','share','rate','yrs','dp'];
+  function calc(){
+    var inc=+document.getElementById('inc').value||0, sh=(+document.getElementById('share').value||0)/100,
+        r=(+document.getElementById('rate').value||0)/1200, n=(+document.getElementById('yrs').value||0)*12, dp=(+document.getElementById('dp').value||0)/100;
+    var emi=inc*sh, loan = r>0 ? emi*(1-Math.pow(1+r,-n))/r : emi*n, price = dp<1 ? loan/(1-dp) : 0;
+    document.getElementById('oEmi').textContent=f(emi)+' / month';
+    document.getElementById('oLoan').textContent=lakh(loan);
+    document.getElementById('oPrice').textContent=lakh(price);
+    var note = price<=3500000 && loan<=2500000 ? 'Within the PMAY-U 2.0 interest-subsidy limits (home up to ₹35 lakh, loan up to ₹25 lakh), if the family meets the income criteria.' :
+               'Above the PMAY-U 2.0 interest-subsidy limits (home up to ₹35 lakh, loan up to ₹25 lakh).';
+    document.getElementById('oNote').textContent=note;
+  }
+  ids.forEach(function(i){document.getElementById(i).addEventListener('input',calc);});
+  calc();
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+
+</body>
+</html>
