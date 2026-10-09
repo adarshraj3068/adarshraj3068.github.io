@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
 <style>
-/* Layout: one long dark page; sticky menu; hero card with photo; then evidence-first sections; Royal Global origin story near the end; tap-to-open certificate gallery. Navy + gold from the LinkedIn banner. */
+/* Layout: one long dark page; sticky menu; hero card with photo; then evidence-first sections; Royal Global origin story near the end. Navy + gold from the LinkedIn banner. */
 :root{
   --bg:#0a111d; --bg2:#0e1726; --card:#121d30; --card2:#16233a; --line:#22324b;
   --text:#eef1f6; --muted:#9aa6ba; --dim:#6f7d95;
@@ -168,7 +168,7 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--dim);font
 <nav aria-label="Sections"><div class="wrap">
   <a class="brand" href="#top">Adarsh <span>Raj</span></a>
   <div class="links">
-    <a href="#impact">Impact</a><a href="#research">Research</a><a href="#experience">Experience</a><a href="#leadership">Leadership</a><a href="#service">Service</a><a href="#honors">Honors</a><a href="#sport">Sport</a><a href="#origin">Early years</a><a href="#certificates">Certificates</a><a href="#contact">Contact</a>
+    <a href="#impact">Impact</a><a href="#research">Research</a><a href="#experience">Experience</a><a href="#leadership">Leadership</a><a href="#service">Service</a><a href="#honors">Honors</a><a href="#sport">Sport</a><a href="#origin">Early years</a><a href="#contact">Contact</a>
   </div>
 </div></nav>
 
@@ -352,12 +352,6 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--dim);font
   </div>
 </div></section>
 
-<!-- CERTIFICATES -->
-<section id="certificates"><div class="wrap">
-  <div class="head"><div class="eyebrow">Certificates</div><h2>The <em>paper trail</em></h2><p>Tap any certificate to see it in full.</p></div>
-  <div class="gallery" id="gallery"></div>
-</div></section>
-
 <!-- LANGUAGES + CONTACT -->
 <section id="contact"><div class="wrap">
   <div class="grid2">
@@ -383,40 +377,8 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--dim);font
 
 <footer><div class="wrap">© <span id="yr">2026</span> Adarsh Raj · Dehradun, India</div></footer>
 
-<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Certificate">
-  <button class="x" type="button" id="lbClose" aria-label="Close">×</button>
-  <figure style="margin:0;text-align:center"><img id="lbImg" alt=""><figcaption><p id="lbCap"></p></figcaption></figure>
-</div>
-
 <script>
 (function(){
-  var certs=[
-    ["qmun-best-delegate-2026","Best Delegate, DISEC · SelaQui QMUN'26"],
-    ["open-state-skating-2025","Gold & Silver · 27th Open State Roller Skating 2025"],
-    ["rollball-silver-2025","Roll Ball Silver, U-17 · 2025"],
-    ["military-history-2025","Military History Seminar · 2025"],
-    ["ashoka-2026","Ashoka Young Scholars Programme · 2026"],
-    ["military-history-2023","Military History Seminar · 2023"],
-    ["rollball-gold-2023","Roll Ball Gold, U-17 · 2023"],
-    ["uk-open-rollball-2023","Roll Ball Gold · UK Open State 2023"],
-    ["south-asian-karate-2019","South Asian Karate-Do Championship · 2019"],
-    ["imo-silver-2019","IMO Silver · 2019"],
-    ["imo-silver-2018","IMO Silver · 2018"],
-    ["all-guwahati-karate-2018","All Guwahati Karate · Gold · 2018"],
-    ["all-kamrup-karate-2017","All Kamrup Karate · 2017"]
-  ];
-  var g=document.getElementById('gallery'), lb=document.getElementById('lb'), li=document.getElementById('lbImg'), lc=document.getElementById('lbCap'), last=null;
-  certs.forEach(function(c){
-    var b=document.createElement('button'); b.type='button';
-    b.innerHTML='<img loading="lazy" src="certs/'+c[0]+'-thumb.jpg" alt=""><span></span>';
-    b.querySelector('span').textContent=c[1]; b.querySelector('img').alt=c[1];
-    b.addEventListener('click',function(){ last=b; li.src='certs/'+c[0]+'.jpg'; li.alt=c[1]; lc.textContent=c[1]; lb.hidden=false; document.getElementById('lbClose').focus(); });
-    g.appendChild(b);
-  });
-  function close(){ lb.hidden=true; li.removeAttribute('src'); if(last) last.focus(); }
-  document.getElementById('lbClose').addEventListener('click',close);
-  lb.addEventListener('click',function(e){ if(e.target===lb) close(); });
-  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&!lb.hidden) close(); });
   document.getElementById('yr').textContent=new Date().getFullYear();
   var cb=document.getElementById('copyBtn');
   cb.addEventListener('click',function(){
