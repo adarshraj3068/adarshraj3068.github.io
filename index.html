@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Adarsh Raj: research on Tier-II housing and family business succession, internships, leadership, service and sport.">
+<meta property="og:title" content="Adarsh Raj"><meta property="og:image" content="img/adarsh.jpg">
+<title>Adarsh Raj</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one long dark page; sticky menu; hero card with photo; then evidence-first sections; Royal Global origin story near the end; tap-to-open certificate gallery. Navy + gold from the LinkedIn banner. */
+:root{
+  --bg:#0a111d; --bg2:#0e1726; --card:#121d30; --card2:#16233a; --line:#22324b;
+  --text:#eef1f6; --muted:#9aa6ba; --dim:#6f7d95;
+  --gold:#d6b46c; --gold2:#b8954a; --goldsoft:rgba(214,180,108,.12); --blue:#8fb0e6;
+  --display:"Fraunces",Georgia,serif; --body:"Manrope",system-ui,-apple-system,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--bg);color:var(--text);font:400 1rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1100px;margin:0 auto;padding-inline:max(16px,4vw)}
+.glow{position:fixed;inset:auto;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0;opacity:.35}
+.glow.a{width:560px;height:560px;background:#1d3a7a;top:-200px;left:-180px}
+.glow.b{width:480px;height:480px;background:#5e4518;top:40%;right:-220px;opacity:.22}
+main,nav,footer{position:relative;z-index:1}
+
+/* nav */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(10,17,29,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:24px;height:60px}
+.brand{font:600 1.1rem var(--display);text-decoration:none;white-space:nowrap}
+.brand span{color:var(--gold)}
+.links{display:flex;gap:20px;overflow-x:auto;scrollbar-width:none;margin-left:auto;mask-image:linear-gradient(90deg,#000 90%,transparent)}
+.links::-webkit-scrollbar{display:none}
+.links a{font:600 .82rem var(--body);color:var(--muted);text-decoration:none;white-space:nowrap;padding:6px 0}
+.links a:hover{color:var(--gold)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:56px;align-items:center;padding-block:80px 64px}
+.eyebrow{font:500 .72rem/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+h1{font:500 clamp(2.6rem,6vw,4.4rem)/1.03 var(--display);letter-spacing:-.02em;margin:16px 0 20px;text-wrap:balance}
+h1 em{color:var(--gold);font-style:italic}
+.lede{color:var(--muted);font-size:1.08rem;max-width:56ch;margin:0}
+.lede b{color:var(--text);font-weight:600}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:12px;font:600 .9rem var(--body);text-decoration:none;border:1px solid var(--line);background:var(--card);transition:transform .2s,border-color .2s,background .2s}
+.btn:hover{transform:translateY(-2px);border-color:var(--gold2)}
+.btn.gold{background:linear-gradient(135deg,#e6c98a,#c39a4b);color:#15110a;border-color:transparent}
+.portrait{position:relative;justify-self:center;width:100%;max-width:300px}
+.portrait .ring{aspect-ratio:1;border-radius:50%;padding:6px;background:conic-gradient(from 200deg,var(--gold),#3b5fb0,var(--gold))}
+.portrait img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;border:6px solid var(--bg)}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:48px;padding-top:28px;border-top:1px solid var(--line)}
+.stat b{display:block;font:500 2rem/1.1 var(--display);color:var(--gold);font-variant-numeric:tabular-nums}
+.stat span{font-size:.82rem;color:var(--muted)}
+
+/* sections */
+section{padding-block:72px;border-top:1px solid var(--line);scroll-margin-top:60px}
+.head{margin-bottom:32px;max-width:680px}
+h2{font:500 clamp(1.8rem,3.4vw,2.5rem)/1.12 var(--display);margin:10px 0 8px;text-wrap:balance}
+h2 em{color:var(--gold);font-style:italic}
+.head p{color:var(--muted);margin:0}
+h3{font:600 1.05rem/1.35 var(--body);margin:0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+.card p{color:var(--muted);font-size:.93rem;margin:8px 0 0}
+.meta{font:500 .74rem/1.4 var(--mono);color:var(--dim);margin-top:4px;letter-spacing:.02em}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.pill{display:inline-block;font:600 .68rem var(--body);padding:4px 10px;border-radius:99px;background:var(--goldsoft);color:var(--gold);white-space:nowrap}
+.pill.blue{background:rgba(143,176,230,.12);color:var(--blue)}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+ul.clean{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:8px}
+ul.clean li{color:var(--muted);font-size:.93rem;padding-left:18px;position:relative}
+ul.clean li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:2px;background:var(--gold2)}
+ul.clean b{color:var(--text);font-weight:600}
+
+/* impact */
+.impact{position:relative;overflow:hidden;padding:28px;border-radius:22px;background:linear-gradient(160deg,var(--card2),var(--card));border:1px solid var(--line)}
+.impact h3{font:500 1.6rem/1.2 var(--display);margin-top:14px}
+.impact .sub{color:var(--gold);font-weight:600;font-size:.9rem;margin-top:4px}
+.impact .soon{margin-top:18px;font:500 .76rem var(--mono);color:var(--dim)}
+
+/* research */
+.pub{margin:18px 0 0;font:500 .74rem/1.5 var(--mono);color:var(--dim)}
+.paper .btn{margin-top:16px}
+.feature{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:16px}
+.paper.big h3{font:500 1.45rem/1.25 var(--display)}
+dl.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px 0 0}
+dl.facts dt{font:500 .66rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+dl.facts dd{margin:4px 0 0;font:500 1.15rem var(--display);color:var(--gold)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.chips span{font:500 .72rem var(--mono);padding:4px 10px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
+.chips span.q{border-style:dashed;color:var(--gold)}
+
+/* timeline-ish list */
+.list{display:grid;gap:14px}
+.row{display:grid;grid-template-columns:150px minmax(0,1fr);gap:20px}
+.row .when{font:500 .78rem/1.5 var(--mono);color:var(--gold);padding-top:3px}
+
+/* honors */
+.honors{display:grid;gap:12px}
+.honor{display:grid;grid-template-columns:76px minmax(0,1fr);gap:18px;align-items:start}
+.honor .yr{font:500 1.3rem/1 var(--display);color:var(--gold);font-variant-numeric:tabular-nums}
+
+/* medals */
+.medals{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:16px}
+.medal{display:flex;gap:12px;align-items:flex-start;background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:14px}
+.dot{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font:700 .7rem var(--body);color:#15110a}
+.dot.g{background:linear-gradient(135deg,#f1d68f,#c9a04c)}
+.dot.s{background:linear-gradient(135deg,#e7ebf1,#a7b0bd)}
+.dot.b{background:linear-gradient(135deg,#e2a774,#a8683a)}
+.medal b{display:block;font-size:.9rem}
+.medal span{font-size:.8rem;color:var(--muted)}
+
+/* origin */
+.origin{border-radius:24px;padding:36px;background:radial-gradient(120% 120% at 0% 0%,rgba(214,180,108,.14),transparent 55%),var(--card);border:1px solid var(--gold2)}
+.origin .years{font:500 .78rem var(--mono);color:var(--gold);letter-spacing:.08em}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px}
+.gallery button{all:unset;cursor:pointer;display:block;border-radius:14px;overflow:hidden;background:var(--card);border:1px solid var(--line);transition:transform .2s,border-color .2s}
+.gallery button:hover{transform:translateY(-3px);border-color:var(--gold2)}
+.gallery button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.gallery img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#fff}
+.gallery span{display:block;padding:10px 12px;font-size:.78rem;color:var(--muted);line-height:1.35}
+.lb{position:fixed;inset:0;z-index:50;background:rgba(5,9,16,.92);display:grid;place-items:center;padding:24px}
+.lb img{max-width:min(1100px,100%);max-height:80vh;border-radius:10px;background:#fff}
+.lb p{margin:14px 0 0;text-align:center;color:var(--muted);font-size:.9rem}
+.lb .x{position:absolute;top:16px;right:16px;all:unset;cursor:pointer;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--card);border:1px solid var(--line);font-size:1.3rem;color:var(--text)}
+.lb .x{position:absolute;top:16px;right:16px}
+
+/* contact */
+.contact{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.copy{display:flex;gap:8px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px 6px 6px 14px}
+.copy code{font:500 .9rem var(--mono);user-select:all;word-break:break-all}
+.copy button{font:600 .8rem var(--body);padding:8px 12px;border-radius:9px;border:0;background:var(--gold);color:#15110a;cursor:pointer}
+footer{border-top:1px solid var(--line);padding-block:28px;color:var(--dim);font-size:.82rem}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:minmax(0,1fr);gap:32px;padding-block:48px}
+  .portrait{order:-1;max-width:200px;justify-self:start}
+  .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .feature{grid-template-columns:minmax(0,1fr)}
+  .brand{display:none}.links{margin-left:0}
+}
+@media (max-width:620px){
+  .grid2,.grid3{grid-template-columns:minmax(0,1fr)}
+  .stats{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .row{grid-template-columns:minmax(0,1fr);gap:4px}
+  .honor{grid-template-columns:58px minmax(0,1fr)}
+  section{padding-block:54px}
+  .origin{padding:24px}
+  dl.facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+</style>
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+
+<div class="glow a" aria-hidden="true"></div>
+<div class="glow b" aria-hidden="true"></div>
+
+<nav aria-label="Sections"><div class="wrap">
+  <a class="brand" href="#top">Adarsh <span>Raj</span></a>
+  <div class="links">
+    <a href="#impact">Impact</a><a href="#research">Research</a><a href="#experience">Experience</a><a href="#leadership">Leadership</a><a href="#service">Service</a><a href="#honors">Honors</a><a href="#sport">Sport</a><a href="#origin">Early years</a><a href="#certificates">Certificates</a><a href="#contact">Contact</a>
+  </div>
+</div></nav>
+
+<main>
+<div class="wrap" id="top">
+  <header class="hero">
+    <div>
+      <div class="eyebrow">Business · Real estate · Infrastructure</div>
+      <h1>How cities grow, and <em>who builds them</em></h1>
+      <p class="lede">I'm <b>Adarsh Raj</b>, a Grade 12 Commerce student at <b>Welham Boys' School</b>, Dehradun. I grew up around a family business that moved from distribution into residential real estate. Now I research how roads, rail and airports change what homes cost in India's <b>Tier-II cities</b>, and how family firms hand over to the next generation.</p>
+      <div class="ctas">
+        <a class="btn gold" href="#impact">See my work →</a>
+        <a class="btn" href="https://www.linkedin.com/in/adarshraj3068" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="mailto:adarshraj3068@gmail.com">Email</a>
+      </div>
+    </div>
+    <div class="portrait"><div class="ring"><img src="img/adarsh.jpg" alt="Adarsh Raj" width="300" height="300"></div></div>
+  </header>
+  <div class="stats" role="list">
+    <div class="stat" role="listitem"><b>2</b><span>Research papers</span></div>
+    <div class="stat" role="listitem"><b>2</b><span>Industry internships</span></div>
+    <div class="stat" role="listitem"><b>1</b><span>International podium for India</span></div>
+  </div>
+</div>
+
+<!-- IMPACT -->
+<section id="impact"><div class="wrap">
+  <div class="head"><div class="eyebrow">Impact projects</div><h2>Two questions I'm <em>working on</em></h2><p>One about the businesses families build, one about the homes families can't afford.</p></div>
+  <div class="grid2">
+    <article class="impact">
+      <span class="pill">Major Impact Project</span>
+      <h3>Passing the Torch</h3>
+      <div class="sub">Professionalising management in family-owned businesses</div>
+      <p style="color:var(--muted);margin:12px 0 0">Fewer than a third of family businesses survive into the second generation. This project looks at how they can bring in professional management during succession without losing what made them work.</p>
+      <a class="btn" style="margin-top:18px" href="passing-the-torch/">Open the project →</a>
+    </article>
+    <article class="impact">
+      <span class="pill blue">Social Impact Project</span>
+      <h3>Home Within Reach</h3>
+      <div class="sub">Bridging India's affordable housing gap</div>
+      <p style="color:var(--muted);margin:12px 0 0">How mid-sized developers in Tier-II cities can build homes that lower-middle-income families can actually buy.</p>
+      <a class="btn" style="margin-top:18px" href="home-within-reach/">Open the project →</a>
+    </article>
+  </div>
+</div></section>
+
+<!-- RESEARCH -->
+<section id="research"><div class="wrap">
+  <div class="head"><div class="eyebrow">Research</div><h2>Two papers, <em>one thread</em></h2><p>Both start from something I saw at home: a family business that has to modernise, and a city that changes around it.</p></div>
+  <div class="feature">
+    <article class="card paper big">
+      <span class="pill">Published · 2026</span>
+      <h3 style="margin-top:14px">Infrastructure, Connectivity and Residential Price Dynamics in India's Tier-II Cities</h3>
+      <p>A comparative study of how new infrastructure lines up with housing prices in five cities, with Siliguri, a gateway to the North-East, as a qualitative case. It keeps a hard line between association and causation.</p>
+      <div class="chips"><span>Jaipur</span><span>Indore</span><span>Lucknow</span><span>Coimbatore</span><span>Nagpur</span><span class="q">Siliguri · case study</span></div>
+      <dl class="facts"><div><dt>Cities</dt><dd>5 + 1</dd></div><div><dt>Method</dt><dd>Mixed</dd></div><div><dt>Focus</dt><dd>Tier-II</dd></div></dl>
+      <p class="pub">IOSR Journal of Economics and Finance · Vol. 17, Issue 3 · 2026 · pp. 120–195<br>DOI 10.9790/5933-170301120195</p>
+      <a class="btn" href="https://www.iosrjournals.org/iosr-jef/papers/Vol17-Issue3/Ser-1/O170301120195.pdf" target="_blank" rel="noopener">Read the paper (PDF) ↗</a>
+    </article>
+    <article class="card paper">
+      <span class="pill blue">Published · Aug 2025</span>
+      <h3 style="margin-top:14px">Balancing Legacy and Modernisation: A Framework for Successful Next-Generation Family Business Succession</h3>
+      <p>A structured review of 52 peer-reviewed sources (2000–2025). It proposes the <b style="color:var(--text)">Legacy Renewal Framework</b>, a four-stage model linking family legacy, professional governance, knowledge transfer and strategic renewal.</p>
+      <dl class="facts"><div><dt>Sources</dt><dd>52</dd></div><div><dt>Span</dt><dd>25 yrs</dd></div><div><dt>Stages</dt><dd>4</dd></div></dl>
+      <p class="pub">IOSR Journal of Business and Management · Vol. 27, Issue 8 · 2025 · pp. 75–86<br>DOI 10.9790/487X-2708017586</p>
+      <a class="btn" href="https://www.iosrjournals.org/iosr-jbm/papers/Vol27-issue8/Ser-1/K2708017586.pdf" target="_blank" rel="noopener">Read the paper (PDF) ↗</a>
+    </article>
+  </div>
+</div></section>
+
+<!-- EXPERIENCE -->
+<section id="experience"><div class="wrap">
+  <div class="head"><div class="eyebrow">Experience</div><h2>Work and <em>programmes</em></h2></div>
+  <div class="grid2">
+    <article class="card">
+      <div class="top"><h3>Sales & Business Development Intern</h3><span class="pill">Internship</span></div>
+      <div class="meta">Neev Lifestyle LLP (NS Group) · Siliguri · May–Jul 2025</div>
+      <p>Benchmarked residential projects across Siliguri on location, pricing, amenities and target buyers, and wrote up the findings. Joined site visits and worked with the sales team on apartment configurations and pricing.</p>
+    </article>
+    <article class="card">
+      <div class="top"><h3>Business Operations Intern</h3><span class="pill">Internship</span></div>
+      <div class="meta">NS Jewellers Siliguri LLP · May–Jun 2026</div>
+      <p>Analysed inventory movement to flag fast- and slow-moving lines, digitised the product catalogue, and drafted customer segmentation notes from the sales floor.</p>
+    </article>
+    <article class="card">
+      <div class="top"><h3>Ashoka University Young Scholars Programme</h3><span class="pill blue">Programme</span></div>
+      <div class="meta">Sonipat · 1–5 June 2026</div>
+      <p>Completed the Entrepreneurship, Business & Leadership Essentials track with Ashoka faculty and students from across India.</p>
+    </article>
+    <article class="card">
+      <div class="top"><h3>Round Square Exchange, Brookhouse School</h3><span class="pill blue">Exchange</span></div>
+      <div class="meta">Nairobi, Kenya · Nov 2025 · 14 days</div>
+      <p>One of four Welham students selected. Took Psychology, Sociology and Economics in the British IGCSE/A-Level system: fewer subjects, more depth, more discussion.</p>
+    </article>
+  </div>
+</div></section>
+
+<!-- LEADERSHIP -->
+<section id="leadership"><div class="wrap">
+  <div class="head"><div class="eyebrow">Leadership & debate</div><h2>Rooms I've <em>run and argued in</em></h2></div>
+  <div class="grid3">
+    <article class="card">
+      <span class="pill">Leadership</span>
+      <h3 style="margin-top:12px">Vice Chair, SPECPOL (UNGA-4)</h3>
+      <div class="meta">WELMUN 2026 · Aug 2026</div>
+      <p>On the executive board of Welham's own conference, two years after attending as a delegate. Moderated debate, ruled on points of order, evaluated delegates.</p>
+    </article>
+    <article class="card">
+      <span class="pill">Best Delegate</span>
+      <h3 style="margin-top:12px">DISEC, SelaQui QMUN'26</h3>
+      <div class="meta">Jan 2026 · Represented Canada</div>
+      <p>Co-authored Draft Resolution 1.2 on nuclear risk reduction with Pakistan and Russia. It passed, and Welham won the Overall Best Delegation trophy.</p>
+    </article>
+    <article class="card">
+      <span class="pill blue">Business pitch</span>
+      <h3 style="margin-top:12px">Eidolon Silk Works</h3>
+      <div class="meta">Quid Pro Quo · Spectrum 2026</div>
+      <p>Pitched turning heritage properties into production sites for premium silk, across three revenue streams, and defended it under questioning.</p>
+    </article>
+  </div>
+  <ul class="clean" style="margin-top:20px">
+    <li><b>Welham News</b>, the school's media team, producing videos for Founder's Day and major school events (2024–present)</li>
+    <li><b>Writer for five school magazines:</b> Oliphant (flagship), Innoventure (business), Fiducia (psychology), Politicia (politics), Sankalp (Hindi)</li>
+    <li><b>MUN Club</b> and <b>Business Club</b> member</li>
+  </ul>
+</div></section>
+
+<!-- SERVICE -->
+<section id="service"><div class="wrap">
+  <div class="head"><div class="eyebrow">Service</div><h2>Roshni Ki <em>Udaan</em></h2><p>A Welham service project with Aasraa Trust and the Bindi Foundation, assembling solar lamps with people who study and live without reliable power.</p></div>
+  <div class="list">
+    <div class="row"><div class="when">Sept 2025</div><div class="card"><h3>GGIC Shelter Home</h3><p>First session: assembled solar-powered lamps with girls supported by Aasraa Trust. I kept going back.</p></div></div>
+    <div class="row"><div class="when">Feb 2026</div><div class="card"><h3>Prem Dham old age home</h3><p>Built Bindi Torches with the residents and gave them the finished lights. From Grade 11, a group of us visited most Sundays, simply to talk.</p></div></div>
+    <div class="row"><div class="when">Mar 2026</div><div class="card"><h3>Bajaj Institute of Learning</h3><p>Built torches with learners who communicate mainly in sign language. Every step had to be explained without speaking. They taught me to spell my name in sign language.</p></div></div>
+  </div>
+</div></section>
+
+<!-- HONORS -->
+<section id="honors"><div class="wrap">
+  <div class="head"><div class="eyebrow">Honors</div><h2>Recognition at <em>Welham</em></h2></div>
+  <div class="honors">
+    <div class="card honor"><div class="yr">2026</div><div><h3>Best Delegate, DISEC, SelaQui QMUN'26</h3><p>Representing Canada.</p></div></div>
+    <div class="card honor"><div class="yr">2025</div><div><h3>Certificate of Commendable Contribution, Military History Seminar</h3><p>Commended by Welham in two editions: October 2023 and October 2025.</p></div></div>
+    <div class="card honor"><div class="yr">2025</div><div><h3>Distinction Certificate and Bronze Scholar</h3><p>For academic performance in Grade 10.</p></div></div>
+    <div class="card honor"><div class="yr">2025</div><div><h3>Selected for the Round Square exchange to Nairobi</h3><p>One of four students chosen from Welham.</p></div></div>
+    <div class="card honor"><div class="yr">2024</div><div><h3>NCC 'A' Certificate</h3><p>29 Uttarakhand BN NCC, after the annual training camp in October 2023.</p></div></div>
+  </div>
+</div></section>
+
+<!-- SPORT -->
+<section id="sport"><div class="wrap">
+  <div class="head"><div class="eyebrow">Sport</div><h2>Varsity, and <em>on the podium</em></h2></div>
+  <div class="grid3">
+    <article class="card"><span class="pill">Gr 10–12</span><h3 style="margin-top:12px">Varsity Skating Team</h3><p>Inline hockey, roller hockey, roll ball and speed, at district and state level. Junior team from Grade 8.</p></article>
+    <article class="card"><span class="pill">Gr 9–10</span><h3 style="margin-top:12px">Varsity Basketball Team</h3><p>All India Golden Jubilee Tournament (2023, 2024), Afzal Khan Memorial, IPSC and the Mayo College U-19 tournament.</p></article>
+    <article class="card"><span class="pill">Gr 12</span><h3 style="margin-top:12px">IPSC Swimming Team</h3><p>Competed at the All India IPSC Swimming Championship.</p></article>
+  </div>
+  <h3 style="margin-top:32px">State roller skating medals, Uttarakhand</h3>
+  <div class="medals">
+    <div class="medal"><div class="dot g" aria-label="Gold">G</div><div><b>Quad 300m · Open</b><span>27th Open State Roller Skating Championship · Oct 2025</span></div></div>
+    <div class="medal"><div class="dot s" aria-label="Silver">S</div><div><b>Inline Hockey · Open</b><span>27th Open State Roller Skating Championship · Oct 2025</span></div></div>
+    <div class="medal"><div class="dot s" aria-label="Silver">S</div><div><b>Roll Ball · U-17</b><span>3rd Uttarakhand Roll Ball State Championship · Aug 2025</span></div></div>
+    <div class="medal"><div class="dot g" aria-label="Gold">G</div><div><b>Roll Ball · U-17</b><span>2nd Uttarakhand State Roll Ball Championship · Oct 2023</span></div></div>
+    <div class="medal"><div class="dot g" aria-label="Gold">G</div><div><b>Roll Ball</b><span>22nd UK Open State Roller Skating Championship · 2023</span></div></div>
+  </div>
+  <p style="color:var(--muted);margin:22px 0 0;font-size:.93rem">Off the clock: a 13,000 ft tandem skydive in Thailand, June 2025.</p>
+</div></section>
+
+<!-- ORIGIN -->
+<section id="origin"><div class="wrap">
+  <div class="origin">
+    <div class="years">2017 – 2022 · GRADES 3 – 7</div>
+    <h2 style="margin-top:10px">Where it started: <em>Royal Global School, Guwahati</em></h2>
+    <p style="color:var(--muted);max-width:62ch;margin:0 0 22px">Five years of karate and maths olympiads in Guwahati, before Welham.</p>
+    <div class="medals" style="margin-top:0">
+      <div class="medal"><div class="dot b" aria-label="Bronze">3</div><div><b>Represented India, South Asian Karate-Do Championship</b><span>Third place, Kata (ages 9–11) · Jan 2019</span></div></div>
+      <div class="medal"><div class="dot g" aria-label="Gold">1</div><div><b>All Guwahati Karate-Do Championship</b><span>First place, Kumite (under 11) · Oct 2018</span></div></div>
+      <div class="medal"><div class="dot b" aria-label="Bronze">3</div><div><b>All Kamrup Karate-Do Championship</b><span>Third place, my first podium · May 2017</span></div></div>
+      <div class="medal"><div class="dot s" aria-label="Silver">S</div><div><b>SOF International Mathematics Olympiad</b><span>School-level silver, back to back · 2018 & 2019</span></div></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- CERTIFICATES -->
+<section id="certificates"><div class="wrap">
+  <div class="head"><div class="eyebrow">Certificates</div><h2>The <em>paper trail</em></h2><p>Tap any certificate to see it in full.</p></div>
+  <div class="gallery" id="gallery"></div>
+</div></section>
+
+<!-- LANGUAGES + CONTACT -->
+<section id="contact"><div class="wrap">
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Languages</div>
+      <ul class="clean">
+        <li><b>English</b>: fluent</li>
+        <li><b>Hindi</b>: native</li>
+        <li><b>Bengali, Assamese</b>: understand and speak a little</li>
+      </ul>
+    </div>
+    <div>
+      <div class="eyebrow">Get in touch</div>
+      <p style="color:var(--muted);margin:12px 0 16px">Happy to talk about real estate, family business or research.</p>
+      <div class="contact">
+        <div class="copy"><code id="mail">adarshraj3068@gmail.com</code><button type="button" id="copyBtn">Copy</button></div>
+        <a class="btn" href="https://www.linkedin.com/in/adarshraj3068" target="_blank" rel="noopener">LinkedIn →</a>
+      </div>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">© <span id="yr">2026</span> Adarsh Raj · Dehradun, India</div></footer>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Certificate">
+  <button class="x" type="button" id="lbClose" aria-label="Close">×</button>
+  <figure style="margin:0;text-align:center"><img id="lbImg" alt=""><figcaption><p id="lbCap"></p></figcaption></figure>
+</div>
+
+<script>
+(function(){
+  var certs=[
+    ["qmun-best-delegate-2026","Best Delegate, DISEC · SelaQui QMUN'26"],
+    ["open-state-skating-2025","Gold & Silver · 27th Open State Roller Skating 2025"],
+    ["rollball-silver-2025","Roll Ball Silver, U-17 · 2025"],
+    ["military-history-2025","Military History Seminar · 2025"],
+    ["ashoka-2026","Ashoka Young Scholars Programme · 2026"],
+    ["military-history-2023","Military History Seminar · 2023"],
+    ["rollball-gold-2023","Roll Ball Gold, U-17 · 2023"],
+    ["uk-open-rollball-2023","Roll Ball Gold · UK Open State 2023"],
+    ["south-asian-karate-2019","South Asian Karate-Do Championship · 2019"],
+    ["imo-silver-2019","IMO Silver · 2019"],
+    ["imo-silver-2018","IMO Silver · 2018"],
+    ["all-guwahati-karate-2018","All Guwahati Karate · Gold · 2018"],
+    ["all-kamrup-karate-2017","All Kamrup Karate · 2017"]
+  ];
+  var g=document.getElementById('gallery'), lb=document.getElementById('lb'), li=document.getElementById('lbImg'), lc=document.getElementById('lbCap'), last=null;
+  certs.forEach(function(c){
+    var b=document.createElement('button'); b.type='button';
+    b.innerHTML='<img loading="lazy" src="certs/'+c[0]+'-thumb.jpg" alt=""><span></span>';
+    b.querySelector('span').textContent=c[1]; b.querySelector('img').alt=c[1];
+    b.addEventListener('click',function(){ last=b; li.src='certs/'+c[0]+'.jpg'; li.alt=c[1]; lc.textContent=c[1]; lb.hidden=false; document.getElementById('lbClose').focus(); });
+    g.appendChild(b);
+  });
+  function close(){ lb.hidden=true; li.removeAttribute('src'); if(last) last.focus(); }
+  document.getElementById('lbClose').addEventListener('click',close);
+  lb.addEventListener('click',function(e){ if(e.target===lb) close(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&!lb.hidden) close(); });
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  var cb=document.getElementById('copyBtn');
+  cb.addEventListener('click',function(){
+    var t='adarshraj3068@gmail.com';
+    function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r);cb.textContent='Selected';}
+    try{navigator.clipboard.writeText(t).then(function(){cb.textContent='Copied';},sel);}catch(e){sel();}
+  });
+})();
+</script>
+
+</body>
+</html>
