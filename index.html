@@ -8,15 +8,16 @@
 <title>Adarsh Raj</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Source+Sans+3:wght@400;600;700&display=swap">
 <style>
-/* Layout: one long dark page; sticky menu; hero card with photo; then evidence-first sections; Royal Global origin story near the end. Navy + gold from the LinkedIn banner. */
+/* Layout: navy cover band with photo and key figures; ruled sections with labels in a left column; navy footer. */
 :root{
-  --bg:#0a111d; --bg2:#0e1726; --card:#121d30; --card2:#16233a; --line:#22324b;
-  --text:#eef1f6; --muted:#9aa6ba; --dim:#6f7d95;
-  --gold:#d6b46c; --gold2:#b8954a; --goldsoft:rgba(214,180,108,.12); --blue:#8fb0e6;
-  --display:"Fraunces",Georgia,serif; --body:"Manrope",system-ui,-apple-system,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
-  color-scheme:dark;
+  --bg:#FFFFFF; --bg2:#F3F5F8; --card:#FFFFFF; --card2:#F7F8FA; --line:#D9DEE5;
+  --text:#14233A; --muted:#4A5568; --dim:#6B7686;
+  --gold:#A4162B; --gold2:#0E2340; --goldsoft:rgba(14,35,64,.045); --blue:#2F5D8A;
+  --navy:#0E2340; --navy2:#1B355A; --crimson:#A4162B; --onnavy:#F2F5F9; --onnavy2:#B4C0D0;
+  --display:"Source Serif 4",Georgia,"Times New Roman",serif; --body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif; --mono:"Source Sans 3",system-ui,sans-serif;
+  color-scheme:light;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -26,12 +27,12 @@ a{color:inherit}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
 .wrap{max-width:1100px;margin:0 auto;padding-inline:max(16px,4vw)}
 .glow{position:fixed;inset:auto;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0;opacity:.35}
-.glow.a{width:560px;height:560px;background:#1d3a7a;top:-200px;left:-180px}
-.glow.b{width:480px;height:480px;background:#5e4518;top:40%;right:-220px;opacity:.22}
+.glow.a{width:560px;height:560px;background:#cfe5da;top:-200px;left:-180px}
+.glow.b{width:480px;height:480px;background:#efe3c9;top:40%;right:-220px;opacity:.22}
 main,nav,footer{position:relative;z-index:1}
 
 /* nav */
-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(10,17,29,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(247,245,240,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;align-items:center;gap:24px;height:60px}
 .brand{font:600 1.1rem var(--display);text-decoration:none;white-space:nowrap}
 .brand span{color:var(--gold)}
@@ -50,9 +51,9 @@ h1 em{color:var(--gold);font-style:italic}
 .ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:12px;font:600 .9rem var(--body);text-decoration:none;border:1px solid var(--line);background:var(--card);transition:transform .2s,border-color .2s,background .2s}
 .btn:hover{transform:translateY(-2px);border-color:var(--gold2)}
-.btn.gold{background:linear-gradient(135deg,#e6c98a,#c39a4b);color:#15110a;border-color:transparent}
+.btn.gold{background:#1F5C4A;color:#fff;border-color:transparent}
 .portrait{position:relative;justify-self:center;width:100%;max-width:300px}
-.portrait .ring{aspect-ratio:1;border-radius:50%;padding:6px;background:conic-gradient(from 200deg,var(--gold),#3b5fb0,var(--gold))}
+.portrait .ring{aspect-ratio:1;border-radius:50%;padding:6px;background:conic-gradient(from 200deg,var(--gold),#9cc4b4,var(--gold))}
 .portrait img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;border:6px solid var(--bg)}
 .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:48px;padding-top:28px;border-top:1px solid var(--line)}
 .stat b{display:block;font:500 2rem/1.1 var(--display);color:var(--gold);font-variant-numeric:tabular-nums}
@@ -71,7 +72,7 @@ h3{font:600 1.05rem/1.35 var(--body);margin:0}
 .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .pill{display:inline-block;font:600 .68rem var(--body);padding:4px 10px;border-radius:99px;background:var(--goldsoft);color:var(--gold);white-space:nowrap}
-.pill.blue{background:rgba(143,176,230,.12);color:var(--blue)}
+.pill.blue{background:rgba(31,78,121,.08);color:var(--blue)}
 .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
 ul.clean{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:8px}
 ul.clean li{color:var(--muted);font-size:.93rem;padding-left:18px;position:relative}
@@ -117,7 +118,7 @@ dl.facts dd{margin:4px 0 0;font:500 1.15rem var(--display);color:var(--gold)}
 .medal span{font-size:.8rem;color:var(--muted)}
 
 /* origin */
-.origin{border-radius:24px;padding:36px;background:radial-gradient(120% 120% at 0% 0%,rgba(214,180,108,.14),transparent 55%),var(--card);border:1px solid var(--gold2)}
+.origin{border-radius:24px;padding:36px;background:radial-gradient(120% 120% at 0% 0%,rgba(31,92,74,.06),transparent 55%),var(--card);border:1px solid var(--gold2)}
 .origin .years{font:500 .78rem var(--mono);color:var(--gold);letter-spacing:.08em}
 
 /* gallery */
@@ -137,7 +138,7 @@ dl.facts dd{margin:4px 0 0;font:500 1.15rem var(--display);color:var(--gold)}
 .contact{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 .copy{display:flex;gap:8px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px 6px 6px 14px}
 .copy code{font:500 .9rem var(--mono);user-select:all;word-break:break-all}
-.copy button{font:600 .8rem var(--body);padding:8px 12px;border-radius:9px;border:0;background:var(--gold);color:#15110a;cursor:pointer}
+.copy button{font:600 .8rem var(--body);padding:8px 12px;border-radius:9px;border:0;background:var(--gold);color:#fff;cursor:pointer}
 footer{border-top:1px solid var(--line);padding-block:28px;color:var(--dim);font-size:.82rem}
 
 @media (max-width:900px){
@@ -156,11 +157,164 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--dim);font
   .origin{padding:24px}
   dl.facts{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
+
+/* Institutional layer: white paper, navy ink, crimson markers, Source Serif 4 + Source Sans 3 */
+body{font:400 1.0625rem/1.62 var(--body);color:var(--text);overflow-x:clip;font-feature-settings:"tnum" 0}
+.glow{display:none}
+:focus-visible{outline:2px solid var(--crimson);outline-offset:3px;border-radius:0}
+
+/* nav */
+nav{background:rgba(255,255,255,.94);border-bottom:1px solid var(--line)}
+nav .wrap{height:64px}
+.brand{font:600 1.3rem/1 var(--display);color:var(--navy);letter-spacing:-.005em}
+.brand span{color:var(--navy)}
+.links a{font:600 .88rem var(--body);color:var(--muted)}
+.links a:hover{color:var(--crimson)}
+@media (min-width:1100px){.links{-webkit-mask-image:none;mask-image:none}}
+
+/* cover band: the first block of every page */
+main > .wrap:first-child{max-width:none;background:var(--navy);color:var(--onnavy);padding-inline:calc(max(16px,4vw) + max(0px,(100% - 1100px) / 2))}
+.hero{grid-template-columns:minmax(0,1fr) 280px;gap:72px;padding-block:76px 8px}
+.hero .eyebrow{color:var(--onnavy2);border:0;padding:0;width:auto;font:600 .9rem/1.3 var(--body)}
+h1{font:500 clamp(2.7rem,5.2vw,4.35rem)/1.04 var(--display);letter-spacing:-.018em;margin:14px 0 22px;color:#fff}
+h1 em,h2 em{font-style:inherit;color:inherit}
+.hero .lede{color:var(--onnavy2);font-size:1.12rem;line-height:1.65;max-width:58ch}
+.hero .lede b{color:#fff;font-weight:600}
+.hero .pill{background:transparent;color:var(--onnavy);border:1px solid rgba(255,255,255,.35)}
+.btn{border-radius:0;padding:13px 22px;font:600 .92rem var(--body);letter-spacing:.01em;background:transparent;color:var(--navy);border:1px solid var(--navy)}
+.btn:hover{transform:none;background:var(--navy);color:#fff;border-color:var(--navy)}
+.hero .btn{color:#fff;border-color:rgba(255,255,255,.4)}
+.hero .btn:hover{background:#fff;color:var(--navy);border-color:#fff}
+.btn.gold,.hero .btn.gold{background:#fff;color:var(--navy);border-color:#fff}
+.btn.gold:hover,.hero .btn.gold:hover{background:var(--onnavy2);border-color:var(--onnavy2);color:var(--navy)}
+.portrait{max-width:280px}
+.portrait .ring{aspect-ratio:4/5;border-radius:0;padding:0;background:none}
+.portrait img{border-radius:0;border:0;object-fit:cover}
+.stats{border-top:0;margin-top:0;padding-block:26px 34px;gap:0}
+.stat{padding:0 24px;border-left:1px solid rgba(255,255,255,.18)}
+.stat:first-child{padding-left:0;border-left:0}
+.stat b{font:500 2.6rem/1 var(--display);color:#fff;margin-bottom:6px}
+.stat span{font-size:.92rem;color:var(--onnavy2)}
+
+/* skyline: fine-line drawing across the foot of the cover */
+.skyline{height:clamp(110px,12vw,160px);color:#fff;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.sky{display:block;width:100%;height:100%}
+.sky path,.sky rect{vector-effect:non-scaling-stroke}
+.sky .back path,.sky .back rect{fill:var(--navy);stroke:currentColor;stroke-width:1;stroke-opacity:.2}
+.sky .front path,.sky .front rect{fill:var(--navy);stroke:currentColor;stroke-width:1;stroke-opacity:.52}
+.sky .front rect.w{fill:url(#win);stroke:none;opacity:.12}
+.sky .site path{fill:none;stroke:currentColor;stroke-width:1;stroke-opacity:.7}
+.sky .site .dash{stroke-dasharray:4 4}
+.sky .site .slab{stroke-opacity:.35}
+.sky .crane path{fill:none;stroke:currentColor;stroke-width:1;stroke-opacity:.8}
+.sky .ground{fill:none;stroke:currentColor;stroke-width:1;stroke-opacity:.45}
+@media (prefers-reduced-motion:no-preference){
+  .sky .bl{transform-box:fill-box;transform-origin:50% 100%;animation:rise 1s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(.35s + var(--i) * 40ms)}
+  .sky .back .bl{animation-duration:1.3s}
+  .sky .ground{stroke-dasharray:1;animation:draw .9s cubic-bezier(.6,0,.2,1) .1s both}
+  .sky .site path{animation:fade .8s ease-out 1.3s both}
+  .sky .crane path{stroke-dasharray:1;animation:draw 1.2s ease-in-out 1.5s both}
+}
+@keyframes rise{from{transform:scaleY(0)}}
+@keyframes draw{from{stroke-dashoffset:1}}
+@keyframes fade{from{opacity:0}}
+
+/* sections */
+section{padding-block:88px;border-top:0}
+section:nth-of-type(even){background:var(--bg2)}
+.eyebrow{display:block;width:max-content;max-width:100%;font:600 .9rem/1.3 var(--body);color:var(--navy);letter-spacing:0;text-transform:none;border-top:2px solid var(--crimson);padding-top:10px}
+.n2,.origin .years{font:600 .85rem/1.3 var(--body);color:var(--crimson);letter-spacing:0;text-transform:none}
+h2{font:500 clamp(1.95rem,3.2vw,2.65rem)/1.12 var(--display);letter-spacing:-.012em;color:var(--navy);margin:16px 0 12px}
+.head p{font-size:1.06rem;color:var(--muted);max-width:62ch}
+h3{font:600 1.08rem/1.35 var(--body);color:var(--navy)}
+@media (min-width:900px){
+  section:has(> .wrap > .head) > .wrap{display:grid;grid-template-columns:190px minmax(0,1fr);column-gap:56px;align-items:start}
+  section:has(> .wrap > .head) > .wrap > *{grid-column:2}
+  section:has(> .wrap > .head) .head{display:contents}
+  section:has(> .wrap > .head) .head .eyebrow{grid-column:1;grid-row:1;width:auto;margin-top:6px}
+  section:has(> .wrap > .head) .head h2{grid-column:2;grid-row:1;margin-top:0}
+  section:has(> .wrap > .head) .head h2:last-child{margin-bottom:36px}
+  section:has(> .wrap > .head) .head p{grid-column:2;margin:0 0 36px}
+}
+
+/* items: ruled columns instead of boxes */
+.card{background:none;border:0;border-top:2px solid var(--navy);border-radius:0;padding:18px 0 0}
+.card p{color:var(--muted);font-size:.98rem}
+.grid2,.grid3{column-gap:36px;row-gap:40px}
+.top{gap:16px}
+.meta{font:400 .86rem/1.45 var(--body);color:var(--dim);letter-spacing:0;font-variant-numeric:tabular-nums}
+.pill{border-radius:0;background:var(--goldsoft);color:var(--navy);border:0;font:600 .74rem var(--body);letter-spacing:.01em;padding:4px 8px}
+.pill.blue{background:rgba(47,93,138,.09);color:var(--blue)}
+ul.clean li{color:var(--muted)}
+ul.clean li::before{width:6px;height:6px;border-radius:0;top:.62em;background:var(--crimson)}
+ul.clean b{color:var(--navy);font-weight:600}
+
+.impact{border-radius:0;background:var(--bg2);border:0;border-top:3px solid var(--navy);padding:32px}
+section:nth-of-type(even) .impact{background:#fff}
+.impact h3{font:500 1.85rem/1.12 var(--display);color:var(--navy);margin-top:16px}
+.impact .sub{color:var(--crimson);font-weight:600}
+
+.paper.big h3{font:500 1.6rem/1.2 var(--display);color:var(--navy)}
+dl.facts{border-top:1px solid var(--line);padding-top:14px}
+dl.facts dt{font:600 .78rem var(--body);letter-spacing:0;text-transform:none;color:var(--dim)}
+dl.facts dd{font:500 1.5rem/1.1 var(--display);color:var(--navy)}
+.chips span{font:400 .8rem var(--body);border-radius:0;border-color:var(--line);color:var(--muted)}
+.chips span.q{border-style:dashed;color:var(--crimson);border-color:var(--crimson)}
+.pub{font:400 .84rem/1.55 var(--body);color:var(--dim)}
+
+.row{grid-template-columns:150px minmax(0,1fr)}
+.row .when{font:600 .9rem/1.4 var(--body);color:var(--crimson);padding-top:20px;font-variant-numeric:tabular-nums}
+.honors{gap:0}
+.card.honor{border-top:1px solid var(--line);padding:20px 0}
+.card.honor:first-child{border-top:2px solid var(--navy)}
+.honor .yr{font:500 1.5rem/1 var(--display);color:var(--navy)}
+
+.medals{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:36px;row-gap:0}
+.medal{background:none;border:0;border-top:1px solid var(--line);border-radius:0;padding:14px 0}
+.medal b{color:var(--navy);font-weight:600}
+.dot{width:26px;height:26px;font-size:.66rem}
+
+.origin{border-radius:0;background:#fff;border:1px solid var(--line);border-left:3px solid var(--crimson);padding:40px}
+.origin h2{margin-top:12px}
+
+.copy{border-radius:0;background:#fff;border-color:var(--line)}
+.copy code{font:400 .95rem var(--body);color:var(--navy)}
+.copy button{border-radius:0;background:var(--navy);color:#fff}
+footer{background:var(--navy);color:var(--onnavy2);border:0;padding-block:32px}
+footer a{color:#fff}
+
+/* project-page parts */
+.big:not(.paper){font:500 2.5rem/1 var(--display);color:var(--navy)}
+.src{font:400 .78rem/1.45 var(--body);color:var(--dim)}
+.callout{border-radius:0;border:0;border-left:3px solid var(--navy);background:var(--goldsoft);color:var(--muted)}
+.callout b{color:var(--navy)}
+th{font:600 .82rem var(--body);letter-spacing:0;text-transform:none;color:var(--navy);border-bottom:2px solid var(--navy)}
+.step .n{border-radius:0;background:var(--navy);color:#fff;font:500 1.3rem var(--display)}
+.inputs input{border-radius:0;background:#fff;border-color:var(--line)}
+.inputs input:focus{outline:2px solid var(--navy)}
+.out div{border-radius:0;background:#fff}
+.out .hl{background:var(--navy);border-color:var(--navy)}
+.out .hl span,.out .hl p{color:var(--onnavy2)}
+.out .hl b{color:#fff;font:500 1.55rem var(--display)}
+ol.refs a,.card a,.callout a,.head a{color:var(--navy);text-decoration-color:var(--crimson);text-underline-offset:3px}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:minmax(0,1fr);gap:32px;padding-block:44px 4px}
+  .portrait{max-width:190px;justify-self:start}
+  .medals{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:620px){
+  section{padding-block:64px}
+  .stat{padding:0 12px}
+  .stat b{font-size:2.1rem}
+  .stat span{font-size:.8rem}
+  .impact,.origin{padding:24px}
+  .row .when{padding-top:0}
+}
 </style>
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
 <body>
-
 
 <div class="glow a" aria-hidden="true"></div>
 <div class="glow b" aria-hidden="true"></div>
@@ -176,17 +330,23 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--dim);font
 <div class="wrap" id="top">
   <header class="hero">
     <div>
-      <div class="eyebrow">Business · Real estate · Infrastructure</div>
+      <div class="eyebrow">Business, real estate and infrastructure</div>
       <h1>How cities grow, and <em>who builds them</em></h1>
       <p class="lede">I'm <b>Adarsh Raj</b>, a Grade 12 Commerce student at <b>Welham Boys' School</b>, Dehradun. I grew up around a family business that moved from distribution into residential real estate. Now I research how roads, rail and airports change what homes cost in India's <b>Tier-II cities</b>, and how family firms hand over to the next generation.</p>
       <div class="ctas">
-        <a class="btn gold" href="#impact">See my work →</a>
+        <a class="btn gold" href="#impact">See my work</a>
         <a class="btn" href="https://www.linkedin.com/in/adarshraj3068" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn" href="mailto:adarshraj3068@gmail.com">Email</a>
       </div>
     </div>
     <div class="portrait"><div class="ring"><img src="img/adarsh.jpg" alt="Adarsh Raj" width="300" height="300"></div></div>
   </header>
+  <div class="skyline" aria-hidden="true"><svg class="sky" viewBox="0 0 1200 200" preserveAspectRatio="xMidYMax slice" role="presentation" focusable="false"><defs>
+<linearGradient id="metal" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+<stop offset="0" style="stop-color:var(--m1)"/><stop offset=".3" style="stop-color:var(--m2)"/><stop offset=".5" style="stop-color:var(--m1)"/><stop offset=".72" style="stop-color:var(--m2)"/><stop offset="1" style="stop-color:var(--m1)"/>
+</linearGradient>
+<pattern id="win" width="7" height="9" patternUnits="userSpaceOnUse"><rect x="2" y="2" width="3" height="4" fill="currentColor"/></pattern>
+</defs><g class="back"><g class="bl bk" style="--i:0"><path d="M-10 196V99H54V196M22 99V77"/></g><g class="bl bk" style="--i:1"><path d="M41 196V50H89V196"/></g><g class="bl bk" style="--i:2"><path d="M86 196V111H167V196"/></g><g class="bl bk" style="--i:3"><path d="M154 196V63H203V196M178 63V50"/></g><g class="bl bk" style="--i:4"><path d="M196 196V48H245V196M220 48V36"/></g><g class="bl bk" style="--i:5"><path d="M249 196V90H300V196"/></g><g class="bl bk" style="--i:6"><path d="M304 196V68H385V196"/></g><g class="bl bk" style="--i:7"><path d="M378 196V47H424V196"/></g><g class="bl bk" style="--i:8"><path d="M419 196V100H489V196"/></g><g class="bl bk" style="--i:9"><path d="M493 196V47H556V196"/></g><g class="bl bk" style="--i:10"><path d="M545 196V94H562V83H609V94H626V196"/></g><g class="bl bk" style="--i:11"><path d="M629 196V110H718V196"/></g><g class="bl bk" style="--i:12"><path d="M723 196V55H780V196M752 55V38"/></g><g class="bl bk" style="--i:13"><path d="M780 196V60H797V46H844V60H861V196"/></g><g class="bl bk" style="--i:14"><path d="M854 196V87H909V196"/></g><g class="bl bk" style="--i:15"><path d="M913 196V51H976V196M944 51V34"/></g><g class="bl bk" style="--i:16"><path d="M976 196V109H1038V196"/></g><g class="bl bk" style="--i:17"><path d="M1040 196V97H1055V85H1095V97H1110V196"/></g><g class="bl bk" style="--i:18"><path d="M1111 196V113H1181V196"/></g><g class="bl bk" style="--i:19"><path d="M1184 196V78H1201V57H1247V78H1264V196"/></g></g><g class="front"><g class="bl fr" style="--i:0"><path d="M-6 196V99H10V88H52V99H68V196"/><rect class="w" x="-1" y="106" width="64" height="83" fill="url(#win)" stroke="none"/><rect x="16" y="92" width="9" height="7" rx="2"/></g><g class="bl fr" style="--i:1"><path d="M77 196V154H155V196"/><rect class="w" x="82" y="161" width="68" height="28" fill="url(#win)" stroke="none"/></g><g class="bl fr" style="--i:3"><path d="M161 196V89H177V73H222V89H238V196"/><rect class="w" x="166" y="96" width="67" height="93" fill="url(#win)" stroke="none"/><rect x="222" y="82" width="9" height="7" rx="2"/></g><g class="bl fr" style="--i:4"><path d="M245 196V103H282V196"/><rect class="w" x="250" y="110" width="27" height="79" fill="url(#win)" stroke="none"/><rect x="253" y="96" width="9" height="7" rx="2"/></g><g class="bl fr" style="--i:5"><path d="M291 196V135H330V196"/><rect class="w" x="296" y="142" width="29" height="47" fill="url(#win)" stroke="none"/><rect x="303" y="128" width="9" height="7" rx="2"/></g><g class="bl fr" style="--i:6"><path d="M338 196V99H399V196"/><rect class="w" x="343" y="106" width="51" height="83" fill="url(#win)" stroke="none"/><rect x="368" y="92" width="9" height="7" rx="2"/></g><g class="bl fr" style="--i:8"><path d="M409 196V145H420V131H451V145H462V196"/><rect class="w" x="414" y="152" width="43" height="37" fill="url(#win)" stroke="none"/></g><g class="bl fr" style="--i:9"><path d="M470 196V114H528V196"/><rect class="w" x="475" y="121" width="48" height="68" fill="url(#win)" stroke="none"/><rect x="486" y="107" width="9" height="7" rx="2"/></g><g class="bl fr" style="--i:13"><path d="M690 196V133H768V196"/><rect class="w" x="695" y="140" width="68" height="49" fill="url(#win)" stroke="none"/></g><g class="bl fr" style="--i:15"><path d="M772 196V126H824V196"/><rect class="w" x="777" y="133" width="42" height="56" fill="url(#win)" stroke="none"/><rect x="800" y="119" width="9" height="7" rx="2"/></g><g class="bl fr" style="--i:16"><path d="M831 196V97H875V196"/><rect class="w" x="836" y="104" width="34" height="85" fill="url(#win)" stroke="none"/></g><g class="bl fr" style="--i:17"><path d="M885 196V112H898V95H933V112H946V196"/><rect class="w" x="890" y="119" width="51" height="70" fill="url(#win)" stroke="none"/><rect x="930" y="105" width="9" height="7" rx="2"/></g><g class="bl fr" style="--i:19"><path d="M954 196V138H993V196"/><rect class="w" x="959" y="145" width="29" height="44" fill="url(#win)" stroke="none"/></g><g class="bl fr" style="--i:20"><path d="M1002 196V148H1048V196"/><rect class="w" x="1007" y="155" width="36" height="34" fill="url(#win)" stroke="none"/></g><g class="bl fr" style="--i:21"><path d="M1051 196V90H1087V196"/><rect class="w" x="1056" y="97" width="26" height="92" fill="url(#win)" stroke="none"/></g><g class="bl fr" style="--i:21"><path d="M1094 196V159H1169V196"/><rect class="w" x="1099" y="166" width="65" height="23" fill="url(#win)" stroke="none"/></g><g class="bl fr" style="--i:23"><path d="M1177 196V130H1222V196"/><rect class="w" x="1182" y="137" width="35" height="52" fill="url(#win)" stroke="none"/></g></g><g class="site"><path class="dash" d="M600 196V104H670V196"/><path class="slab" d="M600 184H670M600 172H670M600 160H670M600 148H670M600 136H670M600 124H670M600 112H670"/></g><g class="crane"><path pathLength="1" d="M584 196V38M592 196V38"/><path pathLength="1" d="M584 196 L592 187 L584 178 L592 169 L584 160 L592 151 L584 142 L592 133 L584 124 L592 115 L584 106 L592 97 L584 88 L592 79 L584 70 L592 61 L584 52 L592 43"/><path pathLength="1" d="M500 38H812M500 45H584M592 45H812"/><path pathLength="1" d="M588 18L500 38M588 18L812 38M584 38L588 18L592 38"/><path pathLength="1" d="M736 45V78M731 78h10v6h-10z"/><path pathLength="1" d="M506 45h22v10h-22z"/></g><path class="ground" pathLength="1" d="M0 196H1200"/></svg></div>
   <div class="stats" role="list">
     <div class="stat" role="listitem"><b>2</b><span>Research papers</span></div>
     <div class="stat" role="listitem"><b>2</b><span>Industry internships</span></div>
@@ -203,14 +363,14 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--dim);font
       <h3>Passing the Torch</h3>
       <div class="sub">Professionalising management in family-owned businesses</div>
       <p style="color:var(--muted);margin:12px 0 0">Fewer than a third of family businesses survive into the second generation. This project looks at how they can bring in professional management during succession without losing what made them work.</p>
-      <a class="btn" style="margin-top:18px" href="passing-the-torch/">Open the project →</a>
+      <a class="btn" style="margin-top:18px" href="passing-the-torch/">Open the project</a>
     </article>
     <article class="impact">
       <span class="pill blue">Social Impact Project</span>
       <h3>Home Within Reach</h3>
       <div class="sub">Bridging India's affordable housing gap</div>
       <p style="color:var(--muted);margin:12px 0 0">How mid-sized developers in Tier-II cities can build homes that lower-middle-income families can actually buy.</p>
-      <a class="btn" style="margin-top:18px" href="home-within-reach/">Open the project →</a>
+      <a class="btn" style="margin-top:18px" href="home-within-reach/">Open the project</a>
     </article>
   </div>
 </div></section>
@@ -220,16 +380,16 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--dim);font
   <div class="head"><div class="eyebrow">Research</div><h2>Two papers, <em>one thread</em></h2><p>Both start from something I saw at home: a family business that has to modernise, and a city that changes around it.</p></div>
   <div class="feature">
     <article class="card paper big">
-      <span class="pill">Published · 2026</span>
+      <span class="pill">Published 2026</span>
       <h3 style="margin-top:14px">Infrastructure, Connectivity and Residential Price Dynamics in India's Tier-II Cities</h3>
       <p>A comparative study of how new infrastructure lines up with housing prices in five cities, with Siliguri, a gateway to the North-East, as a qualitative case. It keeps a hard line between association and causation.</p>
-      <div class="chips"><span>Jaipur</span><span>Indore</span><span>Lucknow</span><span>Coimbatore</span><span>Nagpur</span><span class="q">Siliguri · case study</span></div>
+      <div class="chips"><span>Jaipur</span><span>Indore</span><span>Lucknow</span><span>Coimbatore</span><span>Nagpur</span><span class="q">Siliguri, case study</span></div>
       <dl class="facts"><div><dt>Cities</dt><dd>5 + 1</dd></div><div><dt>Method</dt><dd>Mixed</dd></div><div><dt>Focus</dt><dd>Tier-II</dd></div></dl>
       <p class="pub">IOSR Journal of Economics and Finance · Vol. 17, Issue 3 · 2026 · pp. 120–195<br>DOI 10.9790/5933-170301120195</p>
       <a class="btn" href="https://www.iosrjournals.org/iosr-jef/papers/Vol17-Issue3/Ser-1/O170301120195.pdf" target="_blank" rel="noopener">Read the paper (PDF) ↗</a>
     </article>
     <article class="card paper">
-      <span class="pill blue">Published · Aug 2025</span>
+      <span class="pill blue">Published Aug 2025</span>
       <h3 style="margin-top:14px">Balancing Legacy and Modernisation: A Framework for Successful Next-Generation Family Business Succession</h3>
       <p>A structured review of 52 peer-reviewed sources (2000–2025). It proposes the <b style="color:var(--text)">Legacy Renewal Framework</b>, a four-stage model linking family legacy, professional governance, knowledge transfer and strategic renewal.</p>
       <dl class="facts"><div><dt>Sources</dt><dd>52</dd></div><div><dt>Span</dt><dd>25 yrs</dd></div><div><dt>Stages</dt><dd>4</dd></div></dl>
@@ -340,7 +500,7 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--dim);font
 <!-- ORIGIN -->
 <section id="origin"><div class="wrap">
   <div class="origin">
-    <div class="years">2017 – 2022 · GRADES 3 – 7</div>
+    <div class="years">2017–2022, Grades 3 to 7</div>
     <h2 style="margin-top:10px">Where it started: <em>Royal Global School, Guwahati</em></h2>
     <p style="color:var(--muted);max-width:62ch;margin:0 0 22px">Five years of karate and maths olympiads in Guwahati, before Welham.</p>
     <div class="medals" style="margin-top:0">
@@ -368,7 +528,7 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--dim);font
       <p style="color:var(--muted);margin:12px 0 16px">Happy to talk about real estate, family business or research.</p>
       <div class="contact">
         <div class="copy"><code id="mail">adarshraj3068@gmail.com</code><button type="button" id="copyBtn">Copy</button></div>
-        <a class="btn" href="https://www.linkedin.com/in/adarshraj3068" target="_blank" rel="noopener">LinkedIn →</a>
+        <a class="btn" href="https://www.linkedin.com/in/adarshraj3068" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
   </div>
