@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Passing the Torch</title>
-<meta name="description" content="Adarsh Raj's major impact project on professionalising management in family businesses during succession.">
+<meta name="description" content="Adarsh Raj's Major Impact Project on professionalising management in Indian family businesses during generational succession.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Source+Sans+3:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
 <style>
-/* Layout: one long dark page; sticky menu; hero card with photo; then evidence-first sections; Royal Global origin story near the end; tap-to-open certificate gallery. Navy + gold from the LinkedIn banner. */
+/* Passing the Torch: project report. Institutional system: navy, white and crimson; Source Serif 4 and Source Sans 3. */
 :root{
   --bg:#FFFFFF; --bg2:#F3F5F8; --card:#FFFFFF; --card2:#F7F8FA; --line:#D9DEE5;
   --text:#14233A; --muted:#4A5568; --dim:#6B7686;
@@ -340,14 +340,48 @@ ol.refs a,.card a,.callout a,.head a{color:var(--navy);text-decoration-color:var
   .impact,.origin{padding:24px}
   .row .when{padding-top:0}
 }
+/* v2: report parts */
+.stats{grid-template-columns:repeat(3,minmax(0,1fr))}
+.scope{margin:32px 0 0;font-size:.98rem;color:var(--muted);max-width:72ch}
+.scope b{color:var(--navy)}
+figure.exhibit{margin:0}
+.exhibit figcaption{font:600 1rem/1.4 var(--body);color:var(--navy);margin-bottom:6px}
+.exhibit figcaption span{color:var(--crimson);margin-right:10px}
+.exhibit table{min-width:640px;table-layout:fixed}
+.exhibit th:first-child{width:19%}
+.stat span{display:block;line-height:1.45}
+.exhibit th{vertical-align:bottom}
+.exhibit th small{display:block;margin-top:4px;font:400 .84rem/1.4 var(--body);color:var(--muted)}
+.exhibit td{vertical-align:top;line-height:1.5}
+.subhead{font:500 1.55rem/1.2 var(--display);color:var(--navy);margin:64px 0 24px}
+blockquote.q{margin:20px 0 0;padding:2px 0 2px 18px;border-left:3px solid var(--crimson)}
+blockquote.q p{margin:0;font:italic 500 1.14rem/1.5 var(--display);color:var(--navy)}
+blockquote.q cite{display:block;margin-top:8px;font:400 .86rem/1.4 var(--body);font-style:normal;color:var(--dim)}
+.card p.ev{margin-top:16px;padding-top:12px;border-top:1px solid var(--line);font-size:.92rem}
+.ev b{color:var(--navy)}
+.fineprint{margin:32px 0 0;font-size:.86rem;color:var(--dim)}
+.callout + .callout{margin-top:14px}
+ul.refs{list-style:none;margin:0;padding:0;display:grid;gap:12px;color:var(--muted);font-size:.93rem}
+ul.refs li{padding-left:2em;text-indent:-2em}
+ul.refs a{color:var(--navy);text-decoration-color:var(--crimson);text-underline-offset:3px}
+@media (max-width:620px){
+  .stat b{font-size:1.9rem}
+  .exhibit table{min-width:0}
+  .exhibit thead{display:none}
+  .exhibit tr{display:block;padding:16px 0;border-bottom:1px solid var(--line)}
+  .exhibit tbody tr:first-child{border-top:2px solid var(--navy)}
+  .exhibit td{display:block;border:0;padding:4px 0}
+  .exhibit td:first-child{padding-bottom:8px;color:var(--navy)}
+  .exhibit td[data-label]::before{content:attr(data-label) ": ";font-weight:600;color:var(--text)}
+  .subhead{margin-top:48px}
+}
 </style>
 </head>
 <body>
-<div class="glow a" aria-hidden="true"></div><div class="glow b" aria-hidden="true"></div>
 <nav aria-label="Sections"><div class="wrap">
-  <a class="brand" href="../">Adarsh <span>Raj</span></a>
+  <a class="brand" href="../">Adarsh Raj</a>
   <div class="links">
-    <a href="#problem">Problem</a><a href="#method">Method</a><a href="#findings">Findings</a><a href="#toolkit">Toolkit</a><a href="#survey">Survey</a><a href="#next">Next</a><a href="#sources">Sources</a><a href="../">← Main site</a>
+    <a href="#summary">Summary</a><a href="#context">Context</a><a href="#approach">Approach</a><a href="#findings">Findings</a><a href="#cases">Case studies</a><a href="#framework">Framework</a><a href="#implications">Implications</a><a href="#references">References</a><a href="../">← Main site</a>
   </div>
 </div></nav>
 
@@ -356,93 +390,146 @@ ol.refs a,.card a,.callout a,.head a{color:var(--navy);text-decoration-color:var
   <header class="hero solo">
     <div>
       <div class="eyebrow">Major Impact Project, 2026</div>
-      <h1>Passing the <em>Torch</em></h1>
-      <p class="lede">How family businesses in India can move from <b>founder-led</b> to <b>professionally managed</b> during succession, without losing the trust and legacy that built them.</p>
-      <div class="ctas"><span class="pill">In progress, full launch 1 November 2026</span></div>
+      <h1>Passing the Torch</h1>
+      <p class="lede">This study examines how Indian family enterprises can professionalise their management during generational succession, and how a successor can modernise a founder-led business <b>without eroding the trust and legacy</b> on which it was built.</p>
+      <div class="ctas"><a class="btn gold" href="#findings">Read the findings</a><a class="btn" href="#framework">View the framework</a></div>
     </div>
   </header>
   <div class="stats" role="list">
-    <div class="stat" role="listitem"><b>52</b><span>Sources behind the base framework</span></div>
-    <div class="stat" role="listitem"><b>4</b><span>Stages in the Legacy Renewal Framework</span></div>
-    <div class="stat" role="listitem"><b>3</b><span>Step draft toolkit</span></div>
+    <div class="stat" role="listitem"><b>52</b><span>Sources synthesised in the Legacy Renewal Framework</span></div>
+    <div class="stat" role="listitem"><b>3</b><span>Owner-led enterprises studied as cases</span></div>
+    <div class="stat" role="listitem"><b>4</b><span>Steps in the revised onboarding framework</span></div>
   </div>
 </div>
 
-<section id="problem"><div class="wrap">
-  <div class="head"><div class="eyebrow">The problem</div><h2>When the founder <em>is</em> the system</h2><p>In many mid-sized family firms, every important decision runs through the founder. That works until the next generation arrives.</p></div>
+<section id="summary"><div class="wrap">
+  <div class="head"><div class="eyebrow">Executive summary</div><h2>Successors and owners measure credibility differently</h2><p>Drawing on a survey of the next generation of business families and case studies of three owner-led enterprises, this project tests the assumptions behind my earlier Legacy Renewal Framework and translates them into a practical onboarding framework for successors.</p></div>
   <div class="grid3">
-    <div class="card"><h3>Centralised decisions</h3><p>Approvals, pricing and hiring sit with one person, so the business slows down when that person steps back.</p></div>
-    <div class="card"><h3>Unclear roles</h3><p>Family titles and job titles blur. Nobody is sure who decides what, so disagreements turn personal.</p></div>
-    <div class="card"><h3>Change feels like criticism</h3><p>When a successor introduces new software or processes, it can read as a verdict on how things were done before.</p></div>
+    <div class="card"><h3>The credibility gap</h3><p>Next-generation respondents lean towards running operations well as the way to earn trust. Owners look further ahead: they judge a successor by the growth they can deliver.</p></div>
+    <div class="card"><h3>Knowledge stays with the owner</h3><p>Roles and routines are largely “understood and guided” rather than written down, yet successors rarely treat capturing that knowledge as a priority.</p></div>
+    <div class="card"><h3>Expertise is bought, control is kept</h3><p>The owners studied will bring in engineers, lawyers and other specialists, but decision-making authority stays firmly within the family.</p></div>
   </div>
-  <div class="callout">This builds directly on my first paper, <a href="https://www.iosrjournals.org/iosr-jbm/papers/Vol27-issue8/Ser-1/K2708017586.pdf" target="_blank" rel="noopener"><b>Balancing Legacy and Modernisation</b></a> (IOSR-JBM, 2025), a review of 52 peer-reviewed sources that proposed the <b>Legacy Renewal Framework</b>. That paper asked what succession needs in theory. This project asks what a successor should actually do in their first months.</div>
 </div></section>
 
-<section id="method"><div class="wrap">
-  <div class="head"><div class="eyebrow">Method</div><h2>How I'm <em>studying it</em></h2><p>Planned for October 2026. Each part moves to the findings only once it is done.</p></div>
-  <div class="grid2">
-    <div class="card"><span class="pill">Context</span><h3 style="margin-top:12px">Where the question started</h3><p>My internships at a <b style="color:var(--text)">residential real-estate developer</b> (2025) and a <b style="color:var(--text)">jewellery retailer</b> (2026) in Siliguri.</p></div>
-    <div class="card"><span class="pill">Conversations</span><h3 style="margin-top:12px">Founders and managers</h3><p>Short conversations with family-business founders about handing over and bringing in new systems.</p></div>
-    <div class="card"><span class="pill blue">Secondary research</span><h3 style="margin-top:12px">Published cases and literature</h3><p>Documented Indian family-firm transitions, alongside the peer-reviewed literature from my first paper.</p></div>
-    <div class="card"><span class="pill blue">Survey</span><h3 style="margin-top:12px">Next-generation successors</h3><p>A short survey of people who have joined, or are about to join, a family business.</p></div>
+<section id="context"><div class="wrap">
+  <div class="head"><div class="eyebrow">The challenge</div><h2>When the founder is the system</h2><p>Family enterprises are central to Indian business, and diversified business groups, many of them family-controlled, play an outsized role in the economy (Khanna &amp; Palepu, 2000). In many of these firms, every consequential decision still runs through the founder. The arrangement can work well for decades, until the next generation arrives.</p></div>
+  <div class="grid3">
+    <div class="card"><h3>Centralised authority</h3><p>Approvals, pricing and hiring rest with a single individual, so the enterprise slows the moment that person steps back.</p></div>
+    <div class="card"><h3>Overlapping roles</h3><p>Family titles and job titles blur. When family and business overlap this closely, the same ties that build loyalty can also turn commercial disagreements personal (Tagiuri &amp; Davis, 1996).</p></div>
+    <div class="card"><h3>Change read as criticism</h3><p>When a successor introduces new software or processes, it can be heard as a verdict on how the business has always been run.</p></div>
   </div>
+  <div class="callout">This project builds directly on my first paper, <a href="https://www.iosrjournals.org/iosr-jbm/papers/Vol27-issue8/Ser-1/K2708017586.pdf" target="_blank" rel="noopener"><b>Balancing Legacy and Modernisation</b></a> (IOSR Journal of Business and Management, 2025), which synthesised 52 sources into the <b>Legacy Renewal Framework</b>. That paper asked what succession requires in theory. This project asks what a successor should actually do in their first months.</div>
+</div></section>
+
+<section id="approach"><div class="wrap">
+  <div class="head"><div class="eyebrow">Research design</div><h2>A mixed-methods approach</h2><p>The study pairs breadth with depth: a survey captures how the next generation views succession, while case studies show how owners themselves experience it. Fieldwork was conducted in October 2026.</p></div>
+  <div class="grid2">
+    <div class="card"><span class="pill">Quantitative</span><h3 style="margin-top:12px">Next-generation survey</h3><p>Students and young adults from business-owning families completed a structured questionnaire, shared through school networks and LinkedIn. It examined how their family enterprises are governed, where friction arises and what they believe earns a successor trust. Each participant could respond once, and results are reported only in aggregate.</p></div>
+    <div class="card"><span class="pill">Qualitative</span><h3 style="margin-top:12px">Owner case studies</h3><p>I held structured conversations with the owners of three enterprises, ranging from a small local business to an export-oriented manufacturer. Each covered succession planning, decision-making, openness to change and the use of outside professionals. One of the three owners is a member of my family.</p></div>
+    <div class="card"><span class="pill blue">Foundation</span><h3 style="margin-top:12px">Literature synthesis</h3><p>The Legacy Renewal Framework from my first paper, which draws on 52 sources on succession, governance, knowledge transfer and strategic renewal, supplied the hypotheses tested here.</p></div>
+    <div class="card"><span class="pill blue">Field context</span><h3 style="margin-top:12px">Practitioner exposure</h3><p>The research question first took shape during internships with a residential real-estate developer (2025) and a jewellery retailer (2026) in Siliguri.</p></div>
+  </div>
+  <p class="scope"><b>Scope.</b> The study is exploratory by design. With a modest survey sample and three cases, it surfaces patterns and tensions that merit deeper investigation rather than claiming to represent Indian family businesses as a whole.</p>
 </div></section>
 
 <section id="findings"><div class="wrap">
-  <div class="head"><div class="eyebrow">Hypotheses</div><h2>What I <em>expect to find</em></h2><p>Starting points drawn from my literature review. The cases, conversations and survey will test them, and this section will say which held up.</p></div>
+  <div class="head"><div class="eyebrow">Key findings</div><h2>What the evidence suggests</h2><p>Three hypotheses from the literature were tested against the survey and the case studies. One was partly supported, one was supported with a qualification and one was refined.</p></div>
   <div class="steps">
-    <div class="card step"><div class="n">1</div><div><h3>Earn trust through operations first</h3><p>Successors gain credibility fastest by fixing non-core bottlenecks, like inventory tracking or customer records, before proposing changes to strategy.</p></div></div>
-    <div class="card step"><div class="n">2</div><div><h3>Write the founder's knowledge down</h3><p>Professionalising works when new systems capture the founder's experience, such as who the key suppliers are or how prices are set, rather than replacing it.</p></div></div>
-    <div class="card step"><div class="n">3</div><div><h3>Separate family roles from job roles</h3><p>Clear lines between "family member" and "manager" prevent decisions from stalling and keep disagreements professional.</p></div></div>
+    <div class="card step"><div class="n">1</div><div><span class="pill">Hypothesis 1: partly supported</span><h3 style="margin-top:10px">Successors and owners define credibility differently</h3><p>I expected successors to earn trust fastest by fixing day-to-day operations before proposing strategic change. Next-generation respondents broadly agreed: more of them chose operational reliability than bold strategy, although the most common view was that it depends on the family and the business.</p><p>The owners looked further ahead. Every owner named growth, whether new markets or new projects, as a mark of a capable successor, and most paired it with keeping the core business running well. <b>This credibility gap is the clearest pattern in the study.</b> A successor who focuses only on operations may be solving a problem the owner does not consider the priority.</p></div></div>
+    <div class="card step"><div class="n">2</div><div><span class="pill">Hypothesis 2: supported, with a qualification</span><h3 style="margin-top:10px">Critical knowledge remains tacit</h3><p>Apart from the exporter, whose international operations demand written systems, the case enterprises run on unwritten roles that are, in one owner’s words, “understood and guided”. Yet not a single survey respondent chose documenting roles and processes as their first change.</p><p>The knowledge that most needs capturing is precisely the knowledge no one prioritises capturing. This is a classic tacit-knowledge problem (Nonaka &amp; Takeuchi, 1995), and research identifies the transfer of such knowledge from predecessor to successor as decisive in succession (Cabrera-Suárez et al., 2001).</p><blockquote class="q"><p>“I wished I knew the depth of my business from the very beginning…”</p><cite>Survey respondent</cite></blockquote></div></div>
+    <div class="card step"><div class="n">3</div><div><span class="pill">Hypothesis 3: refined</span><h3 style="margin-top:10px">The friction is relational, not structural</h3><p>I expected unclear decision rights to be the main source of conflict. Respondents rarely cited them. Instead, they pointed to the adoption of new technology, the older generation’s reluctance to change and family disagreements spilling into the business.</p><p>The more effective lever may therefore be separating family conversations from business decisions. One case enterprise already draws this line: ownership stays within the family, while day-to-day management can pass to a salaried manager. This is consistent with research showing that relationship conflict erodes family-firm performance, while productive family relationships strengthen it (Eddleston &amp; Kellermanns, 2007).</p><blockquote class="q"><p>“…how deep in personal life professional family decisions become.”</p><cite>Survey respondent, on what they have learnt</cite></blockquote></div></div>
   </div>
 </div></section>
 
-<section id="toolkit"><div class="wrap">
-  <div class="head"><div class="eyebrow">The output</div><h2>The Next-Gen <em>Onboarding Toolkit</em></h2><p>A three-step checklist for a successor's first months in a family business.</p></div>
+<section id="cases"><div class="wrap">
+  <div class="head"><div class="eyebrow">Case studies</div><h2>Three enterprises, one pattern</h2><p>To look beneath the survey results, I studied three owner-led enterprises as illustrative cases. They range in size and sector, from a small local business to an export-oriented manufacturer, yet they share a common pattern. Owners are not named, to protect their privacy.</p></div>
+  <figure class="exhibit">
+    <figcaption><span>Exhibit 1</span> Comparative profile of the case-study enterprises</figcaption>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Dimension</th><th>Case A<small>Export-oriented pharmaceutical manufacturer</small></th><th>Case B<small>Small local enterprise</small></th><th>Case C<small>Distribution and real-estate enterprise</small></th></tr></thead>
+      <tbody>
+        <tr><td>Succession outlook</td><td data-label="Case A (exporter)">Expected to pass to the next generation; the owner’s son plans to study business</td><td data-label="Case B (local firm)">Ownership to remain in the family; day-to-day management may pass to a salaried manager</td><td data-label="Case C (distribution and real estate)">No formal plan; the business grew organically from the founder’s early start</td></tr>
+        <tr><td>Locus of decisions</td><td data-label="Case A (exporter)">The owner retains final authority</td><td data-label="Case B (local firm)">The owner decides, informed by trusted advisers</td><td data-label="Case C (distribution and real estate)">The owner, in consultation with family and senior leadership</td></tr>
+        <tr><td>Reception of new ideas</td><td data-label="Case A (exporter)">Embraced when they are compelling</td><td data-label="Case B (local firm)">Welcomed and appreciated</td><td data-label="Case C (distribution and real estate)">Heard, but treated with caution after earlier ventures failed</td></tr>
+        <tr><td>Formalisation of roles</td><td data-label="Case A (exporter)">Fully documented systems, driven by export operations</td><td data-label="Case B (local firm)">Informal; roles are “understood and guided” rather than written, and the owner personally approves major purchases</td><td data-label="Case C (distribution and real estate)">Informal; roles are not written down</td></tr>
+        <tr><td>What earns a successor credibility</td><td data-label="Case A (exporter)">Sustaining the core business while expanding into new international markets</td><td data-label="Case B (local firm)">Bold initiatives that grow the business and its profits</td><td data-label="Case C (distribution and real estate)">Both: smooth daily operations and new projects</td></tr>
+        <tr><td>Use of outside professionals</td><td data-label="Case A (exporter)">Extensive, given the international scope of operations</td><td data-label="Case B (local firm)">Open to hiring advisers, but would not cede full control</td><td data-label="Case C (distribution and real estate)">Specialists such as engineers and lawyers, hired where in-house knowledge is lacking</td></tr>
+      </tbody>
+    </table></div>
+  </figure>
+  <h3 class="subhead">What the three enterprises share</h3>
   <div class="grid3">
-    <div class="card"><div class="n2">Step 1</div><h3>Audit operations</h3><ul class="clean">
+    <div class="card"><h3>The owner remains the final authority</h3><p>In every case, consequential decisions rest with the owner, informed by family members, advisers or senior staff. None described a formal succession plan.</p></div>
+    <div class="card"><h3>Change must earn its place</h3><p>New ideas from the younger generation are welcomed when they are compelling, but setbacks leave a mark. In one case, ventures that failed have made the family more cautious.</p></div>
+    <div class="card"><h3>Expertise is hired, control is retained</h3><p>All three use, or are open to using, outside professionals for capabilities the family lacks, yet control remains with the owner in every case. This is consistent with research on the priority family owners place on preserving control, part of what scholars call socioemotional wealth (Gómez-Mejía et al., 2007).</p></div>
+  </div>
+  <div class="callout"><b>Where they differ.</b> Formalisation scales with complexity. Only the exporter runs on documented roles and systems, which suggests, in this small sample, that formal governance is adopted when a business outgrows informal trust, not before. Professionalisation is not a single switch; it takes different forms in different family firms (Stewart &amp; Hitt, 2012).</div>
+  <div class="callout"><b>Published cases point the same way.</b> India’s largest family groups have faced the same tension between family control and professional management. At Dabur, the Burman family decided in 1998 that family members would no longer hold management roles, keeping ownership and board seats instead. At Marico, founder Harsh Mariwala chose an insider professional, Saugata Gupta, rather than his son to lead the company, and Gupta became managing director in 2014 (Sharma, 2025; Marico Limited, 2014). In 2024, the Godrej family divided its group by mutual agreement, with each side keeping the businesses it already ran (Kartik, 2024). In each case, the decisive step was a governance choice, not an operational one.</div>
+</div></section>
+
+<section id="framework"><div class="wrap">
+  <div class="head"><div class="eyebrow">The output</div><h2>The Next-Gen Onboarding Framework</h2><p>The draft toolkit proposed three steps: audit operations, modernise non-core systems and formalise governance. The evidence reshaped it in two ways: owners expect a successor to deliver growth, not merely order, and they prefer to buy expertise rather than build it. The revised framework therefore has four steps.</p></div>
+  <div class="grid2">
+    <div class="card fw"><div class="n2">Step 1, retained</div><h3>Master and stabilise the operation</h3><ul class="clean">
       <li>Map who decides what today</li>
-      <li>List the processes that live only in the founder's head</li>
-      <li>Find the two or three slowest bottlenecks</li>
+      <li>Keep daily operations running smoothly before changing them</li>
+      <li>Identify the two or three bottlenecks that cost the most time or money</li>
+    </ul><p class="ev"><b>Evidence:</b> a well-run operation matters to successors and to most owners, even if owners expect more than that.</p></div>
+    <div class="card fw"><div class="n2">Step 2, new</div><h3>Lead one growth initiative</h3><ul class="clean">
+      <li>Tie any new system to a concrete expansion: a new market, product line or channel</li>
+      <li>Pilot new tools alongside existing methods before switching</li>
+      <li>Report results in the measures the owner already uses</li>
+    </ul><p class="ev"><b>Evidence:</b> owners judge a successor by the growth they deliver.</p></div>
+    <div class="card fw"><div class="n2">Step 3, new</div><h3>Orchestrate outside expertise</h3><ul class="clean">
+      <li>Bring in engineers, lawyers or other specialists where the family lacks capability</li>
+      <li>Define their mandate and the limits of their authority at the outset</li>
+      <li>Act as the bridge between professionals and the family</li>
+    </ul><p class="ev"><b>Evidence:</b> the case enterprises use, or are open to using, specialists while keeping control within the family.</p></div>
+    <div class="card fw"><div class="n2">Step 4, re-sequenced</div><h3>Formalise as the business outgrows trust</h3><ul class="clean">
+      <li>Document roles, decision rights and approval limits once the firm begins exporting, appoints a non-family manager or welcomes the next generation</li>
+      <li>Hold regular family meetings, separate from business reviews</li>
+    </ul><p class="ev"><b>Evidence:</b> formal governance appeared only where complexity demanded it. Relational and formal governance both improve strategic decisions in family firms (Mustakallio et al., 2002).</p></div>
+  </div>
+  <p class="fineprint">Framework version 2.0, October 2026. Free to use and adapt with attribution.</p>
+</div></section>
+
+<section id="implications"><div class="wrap">
+  <div class="head"><div class="eyebrow">Implications</div><h2>What this means in practice</h2><p>Succession is best understood as a multi-stage process rather than a single handover (Le Breton-Miller et al., 2004). These recommendations focus on one stage in particular: a successor’s first months in the business.</p></div>
+  <div class="grid2">
+    <div class="card"><h3>For successors</h3><ul class="clean">
+      <li><b>Earn the right to change.</b> Master the operation first; credibility built on reliability buys room for ambition.</li>
+      <li><b>Speak the language of growth.</b> Present every new system as a route to expansion, not as a correction of the past.</li>
+      <li><b>Become the orchestrator.</b> Your value lies less in knowing everything than in assembling and directing the right expertise.</li>
     </ul></div>
-    <div class="card"><div class="n2">Step 2</div><h3>Modernise non-core systems</h3><ul class="clean">
-      <li>Start with inventory, billing or customer records</li>
-      <li>Run new tools alongside the old way before switching</li>
-      <li>Show results in numbers the founder already uses</li>
-    </ul></div>
-    <div class="card"><div class="n2">Step 3</div><h3>Formalise governance</h3><ul class="clean">
-      <li>Write down roles and approval limits</li>
-      <li>Hold a regular family meeting, separate from business reviews</li>
-      <li>Agree how outside managers are hired and judged</li>
+    <div class="card"><h3>For owners</h3><ul class="clean">
+      <li><b>Define success out loud.</b> Tell your successor what a good first year looks like; the generations often assume different answers.</li>
+      <li><b>Capture what only you know.</b> Record key relationships, pricing logic and decision rules before the transition, not after it.</li>
+      <li><b>Separate the dining table from the boardroom.</b> Hold family meetings apart from business reviews, and keep personal tensions out of commercial decisions.</li>
     </ul></div>
   </div>
-  <p style="color:var(--dim);font-size:.85rem;margin:16px 0 0">Draft version. It will be refined with survey results and published as an open, free resource.</p>
 </div></section>
 
-<section id="survey"><div class="wrap">
-  <div class="callout" style="margin:0"><b>Part of a family business?</b> If you've joined, or are about to join, your family's business, I'd value five minutes of your time. The survey link will appear here once it's live.</div>
-</div></section>
-
-<section id="next"><div class="wrap">
-  <div class="head"><div class="eyebrow">Status</div><h2>What's <em>next</em></h2></div>
-  <div class="list">
-    <div class="row"><div class="when">By 20 Oct 2026</div><div class="card"><p style="margin:0">Read the published cases, run the survey and talk to founders.</p></div></div>
-    <div class="row"><div class="when">By 25 Oct 2026</div><div class="card"><p style="margin:0">Update the findings and toolkit with the survey results.</p></div></div>
-    <div class="row"><div class="when">1 Nov 2026</div><div class="card"><p style="margin:0">Full launch.</p></div></div>
-  </div>
-</div></section>
-
-<section id="sources"><div class="wrap">
+<section id="references"><div class="wrap">
   <div class="head"><div class="eyebrow">Sources</div><h2>References</h2></div>
-  <ol class="refs">
-    <li>Raj, A. (2025). <i>Balancing Legacy and Modernisation: A Framework for Successful Next-Generation Family Business Succession</i>. IOSR Journal of Business and Management, 27(8), 75–86. <a href="https://www.iosrjournals.org/iosr-jbm/papers/Vol27-issue8/Ser-1/K2708017586.pdf" target="_blank" rel="noopener">PDF</a></li>
-    <li>Author's internships in Siliguri, 2025 and 2026 (context only).</li>
-  </ol>
+  <ul class="refs">
+    <li>Cabrera-Suárez, K., De Saá-Pérez, P., &amp; García-Almeida, D. (2001). The succession process from a resource- and knowledge-based view of the family firm. <i>Family Business Review, 14</i>(1), 37–46.</li>
+    <li>Eddleston, K. A., &amp; Kellermanns, F. W. (2007). Destructive and productive family relationships: A stewardship theory perspective. <i>Journal of Business Venturing, 22</i>(4), 545–565.</li>
+    <li>Gómez-Mejía, L. R., Haynes, K. T., Núñez-Nickel, M., Jacobson, K. J. L., &amp; Moyano-Fuentes, J. (2007). Socioemotional wealth and business risks in family-controlled firms: Evidence from Spanish olive oil mills. <i>Administrative Science Quarterly, 52</i>(1), 106–137.</li>
+    <li>Kartik, A. (2024, December 1). Changemakers 2024: The Godrej family split is a lesson in separation. <i>Outlook Business</i>. <a href="https://www.outlookbusiness.com/magazine/changemakers-2024-the-godrej-family-split-is-a-lesson-in-separation" target="_blank" rel="noopener">Link</a></li>
+    <li>Khanna, T., &amp; Palepu, K. (2000). Is group affiliation profitable in emerging markets? An analysis of diversified Indian business groups. <i>The Journal of Finance, 55</i>(2), 867–891.</li>
+    <li>Le Breton-Miller, I., Miller, D., &amp; Steier, L. P. (2004). Toward an integrative model of effective FOB succession. <i>Entrepreneurship Theory and Practice, 28</i>(4), 305–328.</li>
+    <li>Marico Limited. (2014, March 25). <i>Marico Limited elevates Saugata Gupta to Managing Director</i> [Press release]. <a href="https://marico.com/media_pdf/marico-elevates-saugata-gupta-to-managing-director.pdf" target="_blank" rel="noopener">PDF</a></li>
+    <li>Mustakallio, M., Autio, E., &amp; Zahra, S. A. (2002). Relational and contractual governance in family firms: Effects on strategic decision making. <i>Family Business Review, 15</i>(3), 205–222.</li>
+    <li>Nonaka, I., &amp; Takeuchi, H. (1995). <i>The knowledge-creating company: How Japanese companies create the dynamics of innovation</i>. Oxford University Press.</li>
+    <li>Raj, A. (2025). Balancing legacy and modernisation: A framework for successful next-generation family business succession. <i>IOSR Journal of Business and Management, 27</i>(8), 75–86. <a href="https://www.iosrjournals.org/iosr-jbm/papers/Vol27-issue8/Ser-1/K2708017586.pdf" target="_blank" rel="noopener">PDF</a></li>
+    <li>Sharma, M. (2025, September 24). Passing the baton: How India’s family businesses are pivoting to non-family CEOs. <i>Business Today</i>. <a href="https://www.businesstoday.in/amp/magazine/deep-dive/story/india-inc-succession-passing-the-baton-how-indias-family-businesses-are-pivoting-to-non-family-ceos-495474-2025-09-24" target="_blank" rel="noopener">Link</a></li>
+    <li>Stewart, A., &amp; Hitt, M. A. (2012). Why can’t a family business be more like a nonfamily business? Modes of professionalization in family firms. <i>Family Business Review, 25</i>(1), 58–86.</li>
+    <li>Tagiuri, R., &amp; Davis, J. (1996). Bivalent attributes of the family firm. <i>Family Business Review, 9</i>(2), 199–208.</li>
+  </ul>
 </div></section>
 </main>
 
-<footer><div class="wrap">Passing the Torch · a project by <a href="../">Adarsh Raj</a> · <span id="yr">2026</span></div></footer>
+<footer><div class="wrap">Passing the Torch, a project by <a href="../">Adarsh Raj</a>, <span id="yr">2026</span></div></footer>
 <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
-
 </body>
 </html>
