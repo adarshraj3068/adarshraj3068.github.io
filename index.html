@@ -387,19 +387,23 @@ footer{background:linear-gradient(125deg,#0E2340,#1E2F6B)}
 .lb p{color:#cbd5e1}
 .lb[hidden]{display:none}
 .mags{grid-template-columns:repeat(5,minmax(0,1fr))}
-.photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.photos button{all:unset;cursor:pointer;display:block;background:#fff;border:1px solid color-mix(in srgb,var(--ac) 25%,#fff);transition:border-color .2s}
-.photos button:hover{border-color:var(--ac)}
+.photos{display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
+.photos .br{flex-basis:100%;height:0}
+.photos button{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;flex:var(--r) 1 calc(var(--r) * 120px);max-width:calc(var(--r) * 340px);min-width:0;background:#fff;box-shadow:0 0 0 1px color-mix(in srgb,var(--ac) 22%,#fff);transition:box-shadow .2s}
+.photos button:hover{box-shadow:0 0 0 1px var(--ac)}
 .photos button:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
-.photos img{display:block;width:100%;height:270px;object-fit:cover}
-.photos .wide{grid-column:1/-1}
-.photos .wide img{height:auto;aspect-ratio:4/1}
-.photos .span2{grid-column:span 2}
-.photos .tall img{height:380px}
-.photos span{display:block;padding:10px 12px;font-size:.86rem;color:var(--muted);line-height:1.4}
+.photos img{display:block;width:100%;height:auto;aspect-ratio:var(--r);object-fit:cover;background:var(--bg2)}
+.photos span{flex:1;display:block;padding:9px 11px 11px;font-size:.84rem;color:var(--muted);line-height:1.4}
 .photos-sub{margin:40px 0 16px}
-.photos img[src$="welmun-card.jpg"]{object-position:50% 12%}
-@media (max-width:620px){.photos{grid-template-columns:minmax(0,1fr)}.photos .span2{grid-column:auto}.photos img,.photos .tall img{height:240px}.photos .wide img{aspect-ratio:2.4/1;height:auto}.mags{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.press{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:28px;align-items:center;margin-top:40px;padding:22px;background:#fff;box-shadow:0 0 0 1px color-mix(in srgb,var(--ac) 22%,#fff);border-left:4px solid var(--ac)}
+.press button{all:unset;cursor:pointer;display:block}
+.press button:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+.press img{display:block;width:100%;height:auto;box-shadow:0 0 0 1px var(--line)}
+.press .kicker{font:600 .8rem var(--body);color:var(--ac);letter-spacing:.04em;text-transform:uppercase}
+.press h3{font:500 1.3rem/1.28 var(--display);margin:8px 0 10px}
+.press p{color:var(--muted);margin:0 0 10px;font-size:.98rem}
+@media (max-width:760px){.press{grid-template-columns:minmax(0,1fr);padding:16px}}
+@media (max-width:620px){.photos{gap:12px}.photos .br{display:none}.photos button{flex-basis:calc(var(--r) * 165px);max-width:calc(var(--r) * 320px)}.mags{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
 .lb #lbTile .mag{cursor:default}
 @media (max-width:900px){.mags{grid-template-columns:repeat(3,minmax(0,1fr))}}
@@ -414,7 +418,7 @@ footer{background:linear-gradient(125deg,#0E2340,#1E2F6B)}
 <nav aria-label="Sections"><div class="wrap">
   <a class="brand" href="#top">Adarsh <span>Raj</span></a>
   <div class="links">
-    <a href="#impact">Impact</a><a href="#research">Research</a><a href="#experience">Experience</a><a href="#leadership">Leadership</a><a href="#service">Service</a><a href="#photos">Photos</a><a href="#honors">Honors</a><a href="#certificates">Certificates</a><a href="#sport">Sport</a><a href="#origin">Early years</a><a href="#contact">Contact</a>
+    <a href="#impact">Impact</a><a href="#research">Research</a><a href="#experience">Experience</a><a href="#leadership">Leadership</a><a href="#service">Service</a><a href="#honors">Honors</a><a href="#sport">Sport</a><a href="#certificates">Certificates</a><a href="#origin">Early years</a><a href="#campus">Campus</a><a href="#contact">Contact</a>
   </div>
 </div></nav>
 
@@ -440,9 +444,9 @@ footer{background:linear-gradient(125deg,#0E2340,#1E2F6B)}
 <pattern id="win" width="7" height="9" patternUnits="userSpaceOnUse"><rect x="2" y="2" width="3" height="4" fill="currentColor"/></pattern>
 </defs><g class="back"><g class="bl bk" style="--i:0"><path d="M-10 196V99H54V196M22 99V77"/></g><g class="bl bk" style="--i:1"><path d="M41 196V50H89V196"/></g><g class="bl bk" style="--i:2"><path d="M86 196V111H167V196"/></g><g class="bl bk" style="--i:3"><path d="M154 196V63H203V196M178 63V50"/></g><g class="bl bk" style="--i:4"><path d="M196 196V48H245V196M220 48V36"/></g><g class="bl bk" style="--i:5"><path d="M249 196V90H300V196"/></g><g class="bl bk" style="--i:6"><path d="M304 196V68H385V196"/></g><g class="bl bk" style="--i:7"><path d="M378 196V47H424V196"/></g><g class="bl bk" style="--i:8"><path d="M419 196V100H489V196"/></g><g class="bl bk" style="--i:9"><path d="M493 196V47H556V196"/></g><g class="bl bk" style="--i:10"><path d="M545 196V94H562V83H609V94H626V196"/></g><g class="bl bk" style="--i:11"><path d="M629 196V110H718V196"/></g><g class="bl bk" style="--i:12"><path d="M723 196V55H780V196M752 55V38"/></g><g class="bl bk" style="--i:13"><path d="M780 196V60H797V46H844V60H861V196"/></g><g class="bl bk" style="--i:14"><path d="M854 196V87H909V196"/></g><g class="bl bk" style="--i:15"><path d="M913 196V51H976V196M944 51V34"/></g><g class="bl bk" style="--i:16"><path d="M976 196V109H1038V196"/></g><g class="bl bk" style="--i:17"><path d="M1040 196V97H1055V85H1095V97H1110V196"/></g><g class="bl bk" style="--i:18"><path d="M1111 196V113H1181V196"/></g><g class="bl bk" style="--i:19"><path d="M1184 196V78H1201V57H1247V78H1264V196"/></g></g><g class="front"><g class="bl fr" style="--i:0"><path d="M-6 196V99H10V88H52V99H68V196"/><rect class="w" x="-1" y="106" width="64" height="83" fill="url(#win)" stroke="none"/><rect x="16" y="92" width="9" height="7" rx="2"/></g><g class="bl fr" style="--i:1"><path d="M77 196V154H155V196"/><rect class="w" x="82" y="161" width="68" height="28" fill="url(#win)" stroke="none"/></g><g class="bl fr" style="--i:3"><path d="M161 196V89H177V73H222V89H238V196"/><rect class="w" x="166" y="96" width="67" height="93" fill="url(#win)" stroke="none"/><rect x="222" y="82" width="9" height="7" rx="2"/></g><g class="bl fr" style="--i:4"><path d="M245 196V103H282V196"/><rect class="w" x="250" y="110" width="27" height="79" fill="url(#win)" stroke="none"/><rect x="253" y="96" width="9" height="7" rx="2"/></g><g class="bl fr" style="--i:5"><path d="M291 196V135H330V196"/><rect class="w" x="296" y="142" width="29" height="47" fill="url(#win)" stroke="none"/><rect x="303" y="128" width="9" height="7" rx="2"/></g><g class="bl fr" style="--i:6"><path d="M338 196V99H399V196"/><rect class="w" x="343" y="106" width="51" height="83" fill="url(#win)" stroke="none"/><rect x="368" y="92" width="9" height="7" rx="2"/></g><g class="bl fr" style="--i:8"><path d="M409 196V145H420V131H451V145H462V196"/><rect class="w" x="414" y="152" width="43" height="37" fill="url(#win)" stroke="none"/></g><g class="bl fr" style="--i:9"><path d="M470 196V114H528V196"/><rect class="w" x="475" y="121" width="48" height="68" fill="url(#win)" stroke="none"/><rect x="486" y="107" width="9" height="7" rx="2"/></g><g class="bl fr" style="--i:13"><path d="M690 196V133H768V196"/><rect class="w" x="695" y="140" width="68" height="49" fill="url(#win)" stroke="none"/></g><g class="bl fr" style="--i:15"><path d="M772 196V126H824V196"/><rect class="w" x="777" y="133" width="42" height="56" fill="url(#win)" stroke="none"/><rect x="800" y="119" width="9" height="7" rx="2"/></g><g class="bl fr" style="--i:16"><path d="M831 196V97H875V196"/><rect class="w" x="836" y="104" width="34" height="85" fill="url(#win)" stroke="none"/></g><g class="bl fr" style="--i:17"><path d="M885 196V112H898V95H933V112H946V196"/><rect class="w" x="890" y="119" width="51" height="70" fill="url(#win)" stroke="none"/><rect x="930" y="105" width="9" height="7" rx="2"/></g><g class="bl fr" style="--i:19"><path d="M954 196V138H993V196"/><rect class="w" x="959" y="145" width="29" height="44" fill="url(#win)" stroke="none"/></g><g class="bl fr" style="--i:20"><path d="M1002 196V148H1048V196"/><rect class="w" x="1007" y="155" width="36" height="34" fill="url(#win)" stroke="none"/></g><g class="bl fr" style="--i:21"><path d="M1051 196V90H1087V196"/><rect class="w" x="1056" y="97" width="26" height="92" fill="url(#win)" stroke="none"/></g><g class="bl fr" style="--i:21"><path d="M1094 196V159H1169V196"/><rect class="w" x="1099" y="166" width="65" height="23" fill="url(#win)" stroke="none"/></g><g class="bl fr" style="--i:23"><path d="M1177 196V130H1222V196"/><rect class="w" x="1182" y="137" width="35" height="52" fill="url(#win)" stroke="none"/></g></g><g class="site"><path class="dash" d="M600 196V104H670V196"/><path class="slab" d="M600 184H670M600 172H670M600 160H670M600 148H670M600 136H670M600 124H670M600 112H670"/></g><g class="crane"><path pathLength="1" d="M584 196V38M592 196V38"/><path pathLength="1" d="M584 196 L592 187 L584 178 L592 169 L584 160 L592 151 L584 142 L592 133 L584 124 L592 115 L584 106 L592 97 L584 88 L592 79 L584 70 L592 61 L584 52 L592 43"/><path pathLength="1" d="M500 38H812M500 45H584M592 45H812"/><path pathLength="1" d="M588 18L500 38M588 18L812 38M584 38L588 18L592 38"/><path pathLength="1" d="M736 45V78M731 78h10v6h-10z"/><path pathLength="1" d="M506 45h22v10h-22z"/></g><path class="ground" pathLength="1" d="M0 196H1200"/></svg></div>
   <div class="stats" role="list">
-    <div class="stat" role="listitem"><b>2</b><span>Research papers</span></div>
+    <div class="stat" role="listitem"><b>2</b><span>Published research papers</span></div>
     <div class="stat" role="listitem"><b>2</b><span>Industry internships</span></div>
-    <div class="stat" role="listitem"><b>1</b><span>International podium for India</span></div>
+    <div class="stat" role="listitem"><b>3</b><span>Magazines as Senior Editor</span></div>
   </div>
 </div>
 
@@ -461,7 +465,7 @@ footer{background:linear-gradient(125deg,#0E2340,#1E2F6B)}
       <span class="pill blue">Social Impact Project</span>
       <h3>Home Within Reach</h3>
       <div class="sub">Bridging India's affordable housing gap</div>
-      <p style="color:var(--muted);margin:12px 0 0">How mid-sized developers in Tier-II cities can build homes that lower-middle-income families can actually buy.</p>
+      <p style="color:var(--muted);margin:12px 0 0">An applied project on how mid-sized developers in Tier-II cities can build homes that lower-middle-income families can actually buy.</p>
       <a class="btn" style="margin-top:18px" href="home-within-reach/">Open the project</a>
     </article>
   </div>
@@ -474,16 +478,16 @@ footer{background:linear-gradient(125deg,#0E2340,#1E2F6B)}
     <article class="card paper big">
       <span class="pill">Published 2026</span>
       <h3 style="margin-top:14px">Infrastructure, Connectivity and Residential Price Dynamics in India's Tier-II Cities</h3>
-      <p>A comparative study of how new infrastructure lines up with housing prices in five cities, with Siliguri, a gateway to the North-East, as a qualitative case. It keeps a hard line between association and causation.</p>
+      <p>Compares housing-price growth in five Tier-II cities using 140 city-quarter observations from the National Housing Bank's RESIDEX index (2018–25). The finding: infrastructure enables price growth but does not drive it on its own. Nagpur, despite major transport and connectivity investment, missed the post-2022 price acceleration seen in the other four cities. Siliguri, the gateway to India's North-East, is a qualitative case study.</p>
       <div class="chips"><span>Jaipur</span><span>Indore</span><span>Lucknow</span><span>Coimbatore</span><span>Nagpur</span><span class="q">Siliguri, case study</span></div>
-      <dl class="facts"><div><dt>Cities</dt><dd>5 + 1</dd></div><div><dt>Method</dt><dd>Mixed</dd></div><div><dt>Focus</dt><dd>Tier-II</dd></div></dl>
+      <dl class="facts"><div><dt>Cities</dt><dd>5 + 1</dd></div><div><dt>Observations</dt><dd>140</dd></div><div><dt>Period</dt><dd>2018–25</dd></div></dl>
       <p class="pub">IOSR Journal of Economics and Finance · Vol. 17, Issue 3 · 2026 · pp. 120–195<br>DOI 10.9790/5933-170301120195</p>
       <a class="btn" href="https://www.iosrjournals.org/iosr-jef/papers/Vol17-Issue3/Ser-1/O170301120195.pdf" target="_blank" rel="noopener">Read the paper (PDF) ↗</a>
     </article>
     <article class="card paper">
       <span class="pill blue">Published Aug 2025</span>
       <h3 style="margin-top:14px">Balancing Legacy and Modernisation: A Framework for Successful Next-Generation Family Business Succession</h3>
-      <p>A structured review of 52 peer-reviewed sources (2000–2025). It proposes the <b style="color:var(--text)">Legacy Renewal Framework</b>, a four-stage model linking family legacy, professional governance, knowledge transfer and strategic renewal.</p>
+      <p>A structured review of family-business research published between 2000 and 2025: about 430 database results, screened down to 52 sources. From them it builds the <b style="color:var(--text)">Legacy Renewal Framework</b>, a four-stage model linking family legacy, professional governance, knowledge transfer and strategic renewal.</p>
       <dl class="facts"><div><dt>Sources</dt><dd>52</dd></div><div><dt>Span</dt><dd>25 years</dd></div><div><dt>Stages</dt><dd>4</dd></div></dl>
       <p class="pub">IOSR Journal of Business and Management · Vol. 27, Issue 8 · 2025 · pp. 75–86<br>DOI 10.9790/487X-2708017586</p>
       <a class="btn" href="https://www.iosrjournals.org/iosr-jbm/papers/Vol27-issue8/Ser-1/K2708017586.pdf" target="_blank" rel="noopener">Read the paper (PDF) ↗</a>
@@ -496,25 +500,31 @@ footer{background:linear-gradient(125deg,#0E2340,#1E2F6B)}
   <div class="head"><div class="eyebrow">Experience</div><h2>Work and <em>programs</em></h2></div>
   <div class="grid2">
     <article class="card">
-      <div class="top"><h3>Sales & Business Development Intern</h3><span class="pill">Internship</span></div>
+      <div class="top"><h3>Sales and Business Development Intern</h3><span class="pill">Internship</span></div>
       <div class="meta">Neev Lifestyle LLP (NS Group) · Siliguri · May–Jul 2025</div>
       <p>Benchmarked residential projects across Siliguri on location, pricing, amenities and target buyers, and wrote up the findings. Joined site visits and worked with the sales team on apartment configurations and pricing.</p>
     </article>
     <article class="card">
       <div class="top"><h3>Business Operations Intern</h3><span class="pill">Internship</span></div>
       <div class="meta">NS Jewellers Siliguri LLP · May–Jun 2026</div>
-      <p>Analyzed inventory movement to flag fast- and slow-moving lines, digitized the product catalog, and drafted customer segmentation notes from the sales floor.</p>
+      <p>Analyzed inventory movement to flag fast- and slow-moving lines, digitized the product catalog and drafted customer-segmentation notes from the sales floor.</p>
     </article>
     <article class="card">
       <div class="top"><h3>Ashoka University Young Scholars Programme</h3><span class="pill blue">Program</span></div>
       <div class="meta">Sonipat · 1–5 June 2026</div>
-      <p>Completed the Entrepreneurship, Business & Leadership Essentials track with Ashoka faculty and students from across India.</p>
+      <p>Completed the Entrepreneurship, Business and Leadership Essentials stream, learning with Ashoka faculty and students from across India.</p>
     </article>
     <article class="card">
       <div class="top"><h3>Round Square Exchange, Brookhouse School</h3><span class="pill blue">Exchange</span></div>
       <div class="meta">Nairobi, Kenya · Nov 2025 · 14 days</div>
-      <p>One of four Welham students selected. Took Psychology, Sociology and Economics in the British IGCSE/A-Level system: fewer subjects, more depth, more discussion.</p>
+      <p>One of four Welham students selected. Attended Psychology, Sociology and Economics classes in Brookhouse's British IGCSE/A-Level curriculum: fewer subjects, more depth, more discussion.</p>
     </article>
+  </div>
+  <h3 class="photos-sub">Nairobi, November 2025</h3>
+  <div class="photos">
+    <button type="button" style="--r:1.5753" data-full="img/own-brookhouse-office.jpg" data-cap="With the head of Brookhouse School in his office (far left)."><img src="img/own-brookhouse-office.jpg" alt="Four Welham students in school blazers standing behind the head of Brookhouse School at his desk" loading="lazy" decoding="async"><span>With the head of Brookhouse School in his office (far left)</span></button>
+    <button type="button" style="--r:1.6128" data-full="img/own-nairobi-park.jpg" data-cap="At the main gate of Nairobi National Park with the exchange group."><img src="img/own-nairobi-park.jpg" alt="The exchange group of Welham and Brookhouse students at the main gate of Nairobi National Park" loading="lazy" decoding="async"><span>At the main gate of Nairobi National Park with the exchange group</span></button>
+    <button type="button" style="--r:0.7922" data-full="img/own-brookhouse-walk.jpg" data-cap="Walking across the Brookhouse campus with a friend."><img src="img/own-brookhouse-walk.jpg" alt="Two Welham students in blazers walking along a paved path at Brookhouse School" loading="lazy" decoding="async"><span>Walking across the Brookhouse campus with a friend</span></button>
   </div>
 </div></section>
 
@@ -532,77 +542,82 @@ footer{background:linear-gradient(125deg,#0E2340,#1E2F6B)}
       <span class="pill">Leadership</span>
       <h3 style="margin-top:12px">Vice Chair, SPECPOL (UNGA-4)</h3>
       <div class="meta">WELMUN 2026 · Aug 2026</div>
-      <p>On the executive board of Welham's own conference, two years after attending as a delegate. Moderated debate, ruled on points of order, evaluated delegates.</p>
+      <p>On the executive board of Welham's own conference, two years after attending it as a delegate. Moderated debate, ruled on points of order and evaluated delegates.</p>
     </article>
     <article class="card">
       <span class="pill">Best Delegate</span>
       <h3 style="margin-top:12px">DISEC, SelaQui QMUN'26</h3>
-      <div class="meta">Jan 2026 · Represented Canada</div>
-      <p>Co-authored Draft Resolution 1.2 on nuclear risk reduction with Pakistan and Russia. It passed, and Welham won the Overall Best Delegation trophy.</p>
+      <div class="meta">SelaQui International School · Apr 2026 · Represented Canada</div>
+      <p>With the delegates of Pakistan and Russia, co-authored Draft Resolution 1.2 on nuclear risk reduction, which passed. Welham also won the Overall Best Delegation trophy.</p>
     </article>
     <article class="card">
       <span class="pill blue">Business pitch</span>
       <h3 style="margin-top:12px">Eidolon Silk Works</h3>
       <div class="meta">Quid Pro Quo · Spectrum 2026</div>
-      <p>Pitched turning heritage properties into production sites for premium silk, across three revenue streams, and defended it under questioning.</p>
+      <p>Pitched a venture that turns heritage properties into production sites for premium silk, built on three revenue streams, and defended it under questioning.</p>
     </article>
   </div>
   <ul class="clean" style="margin-top:20px">
-    <li><b>Welham News</b>, the school's media team: produce videos for Founder's Day and other major school events (2026–present)</li>
+    <li><b>Member, Welham News</b>, the school's media team (2026–present): produce videos for Founder's Day and other major school events</li>
     <li><b>Creative Editor, Wavelength</b>, the school's science magazine (2025–26): developed the visual theme of each issue and designed its layouts, covers and illustrations</li>
     <li><b>Contributor</b> to The Oliphant, the school's flagship magazine, and Innoventure (business and economics)</li>
     <li><b>MUN Club</b> and <b>Business Club</b> member</li>
   </ul>
+  <h3 class="photos-sub">Model UN</h3>
+  <div class="photos">
+    <button type="button" style="--r:1.6487" data-full="img/own-welmun-dais.jpg" data-cap="Moderating SPECPOL (UNGA-4) as Vice Chair at WELMUN 2026 (center)."><img src="img/own-welmun-dais.jpg" alt="Adarsh Raj speaking into a microphone at the center of the SPECPOL executive board at WELMUN 2026, behind his name placard" loading="lazy" decoding="async"><span>Moderating SPECPOL (UNGA-4) as Vice Chair at WELMUN 2026 (center)</span></button>
+    <button type="button" style="--r:1.3394" data-full="img/own-welmun-podium.jpg" data-cap="Speaking from the podium at WELMUN."><img src="img/own-welmun-podium.jpg" alt="Adarsh Raj speaking at a podium on the WELMUN stage, with flags and the conference banner behind him" loading="lazy" decoding="async"><span>Speaking from the podium at WELMUN</span></button>
+    <i class="br" aria-hidden="true"></i>
+    <button type="button" style="--r:2.4584" data-full="img/own-welmun-question.jpg" data-cap="Taking a delegate&#x27;s question at the dais, WELMUN 2026 (left, in green)."><img src="img/own-welmun-question.jpg" alt="A delegate leaning across the dais to ask the SPECPOL executive board a question at WELMUN 2026" loading="lazy" decoding="async"><span>Taking a delegate&#x27;s question at the dais, WELMUN 2026 (left, in green)</span></button>
+    <button type="button" style="--r:0.621" data-full="img/welmun-card.jpg" data-cap="From the WELMUN 2026 executive-board announcement."><img src="img/welmun-card.jpg" alt="Executive-board card from WELMUN 2026 showing Adarsh Raj as Vice Chairperson" loading="lazy" decoding="async"><span>From the WELMUN 2026 executive-board announcement</span></button>
+    <i class="br" aria-hidden="true"></i>
+    <button type="button" style="--r:1.1526" data-full="img/own-qmun-award.jpg" data-cap="Receiving the Best Delegate award for DISEC at QMUN&#x27;26, April 2026."><img src="img/own-qmun-award.jpg" alt="Adarsh Raj receiving a trophy and certificate on stage at the SelaQui International School Model United Nations Conference 2026" loading="lazy" decoding="async"><span>Receiving the Best Delegate award for DISEC at QMUN&#x27;26, April 2026</span></button>
+    <button type="button" style="--r:1.5598" data-full="img/own-qmun-delegation.jpg" data-cap="Welham&#x27;s delegation with the Overall Best Delegation trophy at QMUN&#x27;26 (in black and gold)."><img src="img/own-qmun-delegation.jpg" alt="Welham&#x27;s QMUN delegation on stage with the Overall Best Delegation trophy" loading="lazy" decoding="async"><span>Welham&#x27;s delegation with the Overall Best Delegation trophy at QMUN&#x27;26 (in black and gold)</span></button>
+    <button type="button" style="--r:0.9091" data-full="img/own-qmun-outside.jpg" data-cap="After the awards at QMUN&#x27;26, with my trophy and certificate (right)."><img src="img/own-qmun-outside.jpg" alt="Adarsh Raj holding his trophy and certificate beside a Welham teammate on the SelaQui campus" loading="lazy" decoding="async"><span>After the awards at QMUN&#x27;26, with my trophy and certificate (right)</span></button>
+  </div>
 
   <h3 style="margin-top:40px">The magazines</h3>
   <div class="mags">
-    <button class="mag" type="button" data-cover="img/mag-sankalp.jpg" data-cap="Sankalp, the Welham Boys' School Hindi-language magazine. Senior Editor." data-link="https://www.welhamboys.org/publication-welham-boys-school"><div class="cv" style="--m1:#B45309;--m2:#7C2D12">Sankalp</div><b>Sankalp</b><span>Hindi · Senior Editor · 2026–</span></button>
-    <button class="mag" type="button" data-cover="img/mag-politicia.jpg" data-cap="Politicia, the Welham Boys' School political and social commentary magazine. Senior Editor." data-link="https://www.welhamboys.org/publication-welham-boys-school"><div class="cv" style="--m1:#BE123C;--m2:#4C0519">Politicia</div><b>Politicia</b><span>Political and social commentary · Senior Editor · 2026–</span></button>
-    <button class="mag" type="button" data-cover="img/mag-freudacia.jpg" data-cap="Freudacia, the Welham Boys' School psychology magazine. Senior Editor." data-link="https://www.welhamboys.org/publication-welham-boys-school"><div class="cv" style="--m1:#6D28D9;--m2:#2E1065">Freudacia</div><b>Freudacia</b><span>Psychology · Senior Editor · 2026–</span></button>
-    <button class="mag" type="button" data-cover="img/mag-wavelength.jpg" data-cap="Wavelength, the Welham Boys' School science magazine. Creative Editor." data-link="https://www.welhamboys.org/publication-welham-boys-school"><div class="cv" style="--m1:#0F766E;--m2:#134E4A">Wavelength</div><b>Wavelength</b><span>Science · Creative Editor · 2025–26</span></button>
-    <button class="mag" type="button" data-cover="img/mag-innoventure.jpg" data-cap="Innoventure, the Welham Boys' School business and economics magazine. Contributor." data-link="https://www.welhamboys.org/publication-welham-boys-school"><div class="cv" style="--m1:#334155;--m2:#0F172A">Innoventure</div><b>Innoventure</b><span>Business and economics · Contributor</span></button>
+    <button class="mag" type="button" data-cover="img/mag-sankalp.jpg" data-cap="Sankalp, the Hindi-language magazine of Welham Boys&#x27; School. Senior Editor, 2026–present." data-link="https://www.welhamboys.org/publication-welham-boys-school"><div class="cv" style="--m1:#B45309;--m2:#7C2D12">Sankalp</div><b>Sankalp</b><span>Hindi · Senior Editor · 2026–present</span></button>
+    <button class="mag" type="button" data-cover="img/mag-politicia.jpg" data-cap="Politicia, the political and social commentary magazine of Welham Boys&#x27; School. Senior Editor, 2026–present." data-link="https://www.welhamboys.org/publication-welham-boys-school"><div class="cv" style="--m1:#BE123C;--m2:#4C0519">Politicia</div><b>Politicia</b><span>Political and social commentary · Senior Editor · 2026–present</span></button>
+    <button class="mag" type="button" data-cover="img/mag-freudacia.jpg" data-cap="Freudacia, the psychology magazine of Welham Boys&#x27; School. Senior Editor, 2026–present." data-link="https://www.welhamboys.org/publication-welham-boys-school"><div class="cv" style="--m1:#6D28D9;--m2:#2E1065">Freudacia</div><b>Freudacia</b><span>Psychology · Senior Editor · 2026–present</span></button>
+    <button class="mag" type="button" data-cover="img/mag-wavelength.jpg" data-cap="Wavelength, the science magazine of Welham Boys&#x27; School. Creative Editor, 2025–26." data-link="https://www.welhamboys.org/publication-welham-boys-school"><div class="cv" style="--m1:#0F766E;--m2:#134E4A">Wavelength</div><b>Wavelength</b><span>Science · Creative Editor · 2025–26</span></button>
+    <button class="mag" type="button" data-cover="img/mag-innoventure.jpg" data-cap="Innoventure, the business and economics magazine of Welham Boys&#x27; School. Contributor." data-link="https://www.welhamboys.org/publication-welham-boys-school"><div class="cv" style="--m1:#334155;--m2:#0F172A">Innoventure</div><b>Innoventure</b><span>Business and economics · Contributor</span></button>
   </div>
   <p style="color:var(--muted);margin:16px 0 0;font-size:.93rem">Issues are published on the school website: <a href="https://www.welhamboys.org/publication-welham-boys-school" target="_blank" rel="noopener">Welham Boys' School publications ↗</a></p>
 </div></section>
 
 <!-- SERVICE -->
 <section id="service"><div class="wrap">
-  <div class="head"><div class="eyebrow">Service</div><h2>Roshni Ki <em>Udaan</em></h2><p>A Welham service project with Aasraa Trust and the Bindi Foundation, assembling solar lamps with people who study and live without reliable power.</p></div>
+  <div class="head"><div class="eyebrow">Service</div><h2>Roshni Ki <em>Udaan</em></h2><p>A Welham service project, run with Aasraa Trust and supported by the Bindi Foundation, that introduces underserved communities to solar technology by building solar lamps with them.</p></div>
   <div class="list">
-    <div class="row"><div class="when">Sept 2025</div><div class="card"><h3>GGIC Shelter Home</h3><p>First session: assembled solar-powered lamps with girls supported by Aasraa Trust. I kept going back.</p></div></div>
+    <div class="row"><div class="when">Aug 2025</div><div class="card"><h3>GGIC Shelter Home, Rajpur Road</h3><p>The launch session: we built solar-powered lamps with girls supported by Aasraa Trust, and the <i>Garhwal Post</i> reported on it. I kept going back.</p></div></div>
     <div class="row"><div class="when">Feb 2026</div><div class="card"><h3>Prem Dham old age home</h3><p>Built Bindi Torches with the residents and gave them the finished lights. From Grade 11, a group of us visited most Sundays, simply to talk.</p></div></div>
-    <div class="row"><div class="when">Mar 2026</div><div class="card"><h3>Bajaj Institute of Learning</h3><p>Built torches with learners who communicate mainly in sign language. Every step had to be explained without speaking. They taught me to spell my name in sign language.</p></div></div>
+    <div class="row"><div class="when">Mar 2026</div><div class="card"><h3>Bajaj Institute of Learning</h3><p>Back at GGIC to build torches with learners from the Bajaj Institute of Learning, many of whom communicate in sign language. Every step had to be explained without speaking. They taught me to spell my name in sign language.</p></div></div>
   </div>
-</div></section>
-
-<!-- PHOTOS -->
-<section id="photos"><div class="wrap">
-  <div class="head"><div class="eyebrow">Photos</div><h2>At Welham, <em>and beyond it</em></h2><p>School photographs from the events and projects described on this page, and the campus in Dehradun where I have studied since Grade 8.</p></div>
-  <div class="photos">
-    <button type="button" class="wide" data-full="img/photo-welham.jpg" data-cap="Welham Boys' School, Dehradun."><img src="img/photo-welham.jpg" alt="The red-brick main building of Welham Boys' School in Dehradun, framed by trees under a blue sky" loading="lazy" decoding="async"><span>Welham Boys' School, Dehradun</span></button>
-    <button type="button" class="span2" data-full="img/photo-welmun.jpg" data-cap="On the dais as Vice Chair of SPECPOL (UNGA-4) at WELMUN 2026 (centre)."><img src="img/photo-welmun.jpg" alt="Adarsh Raj seated at the centre of the SPECPOL executive board at WELMUN 2026, behind his name placard" loading="lazy" decoding="async"><span>On the dais as Vice Chair of SPECPOL (UNGA-4) at WELMUN 2026 (centre)</span></button>
-    <button type="button" data-full="img/welmun-card.jpg" data-cap="WELMUN 2026 executive board: Vice Chairperson."><img src="img/welmun-card.jpg" alt="WELMUN 2026 executive board card showing Adarsh Raj as Vice Chairperson" loading="lazy" decoding="async"><span>WELMUN 2026 executive board: Vice Chairperson</span></button>
-    <button type="button" data-full="img/photo-nairobi.jpg" data-cap="Brookhouse School, Nairobi: the Welham exchange group, November 2025."><img src="img/photo-nairobi.jpg" alt="Welham students in school blazers standing beside the Brookhouse School crest in Nairobi" loading="lazy" decoding="async"><span>Brookhouse School, Nairobi: the Welham exchange group, November 2025</span></button>
-    <button type="button" data-full="img/photo-premdham.jpg" data-cap="Roshni Ki Udaan at Prem Dham: building solar torches with residents, February 2026."><img src="img/photo-premdham.jpg" alt="Welham students and elderly residents assembling small solar lamps with soldering irons" loading="lazy" decoding="async"><span>Roshni Ki Udaan at Prem Dham: building solar torches with residents, February 2026</span></button>
-    <button type="button" data-full="img/photo-bajaj.jpg" data-cap="Roshni Ki Udaan with learners from the Bajaj Institute of Learning, March 2026."><img src="img/photo-bajaj.jpg" alt="A Welham student and a young learner soldering the parts of a solar torch together" loading="lazy" decoding="async"><span>Roshni Ki Udaan with learners from the Bajaj Institute of Learning, March 2026</span></button>
+  <div class="press">
+    <button type="button" data-full="img/own-garhwal-post.jpg" data-cap="Garhwal Post, Dehradun, 25 August 2025, page 16."><img src="img/own-garhwal-post.jpg" alt="Garhwal Post clipping of 25 August 2025 reporting the launch of Roshni Ki Udaan, with a group photo of Welham students and the girls at GGIC, Rajpur Road" loading="lazy" decoding="async"></button>
+    <div>
+      <div class="kicker">In the press</div>
+      <h3>&ldquo;Welham Boys&rsquo; School launches &lsquo;Roshni Ki Udaan&rsquo; to empower girls through Solar Technology&rdquo;</h3>
+      <p><i>Garhwal Post</i>, Dehradun, 25 August 2025, page 16. The report covers the launch session at the GGIC Shelter Home on Rajpur Road, where Welham students and girls supported by Aasraa Trust assembled solar-powered lamps together.</p>
+      <p style="margin:0;font-size:.9rem">Open the clipping to read the full report.</p>
+    </div>
   </div>
-  <h3 class="photos-sub">Campus, Dehradun</h3>
+  <h3 class="photos-sub">On the ground</h3>
   <div class="photos">
-    <button type="button" class="tall" data-full="img/campus-art.jpg" data-cap="The Welham Art School wall."><img src="img/campus-art.jpg" alt="A brick wall painted with murals and the words Welham Art School, under a clear blue sky" loading="lazy" decoding="async"><span>The Welham Art School wall</span></button>
-    <button type="button" class="tall" data-full="img/campus-avenue.jpg" data-cap="A tree-lined avenue on campus."><img src="img/campus-avenue.jpg" alt="A paved avenue lined with tall trees, their trunks painted white, leading to a school building" loading="lazy" decoding="async"><span>A tree-lined avenue on campus</span></button>
-    <button type="button" class="tall" data-full="img/campus-gulmohar.jpg" data-cap="Gulmohar in bloom in a campus courtyard."><img src="img/campus-gulmohar.jpg" alt="A gulmohar tree with red flowers shading a courtyard with green benches, in front of a red-brick building" loading="lazy" decoding="async"><span>Gulmohar in bloom in a campus courtyard</span></button>
-    <button type="button" data-full="img/campus-dusk.jpg" data-cap="Dusk over the campus rooftops."><img src="img/campus-dusk.jpg" alt="Red rooftops and trees on campus under a cloudy evening sky" loading="lazy" decoding="async"><span>Dusk over the campus rooftops</span></button>
-    <button type="button" data-full="img/campus-field.jpg" data-cap="Sunset over the playing fields."><img src="img/campus-field.jpg" alt="The sun setting behind tall trees at the edge of a playing field" loading="lazy" decoding="async"><span>Sunset over the playing fields</span></button>
-    <button type="button" data-full="img/campus-ground.jpg" data-cap="The main building across the playing field."><img src="img/campus-ground.jpg" alt="A long red-brick school building across a grass playing field under a wide cloudy sky" loading="lazy" decoding="async"><span>The main building across the playing field</span></button>
-    <button type="button" class="wide" data-full="img/campus-arches.jpg" data-cap="The arches at night."><img src="img/campus-arches.jpg" alt="A black-and-white night photograph of a long building with a row of pointed arches" loading="lazy" decoding="async"><span>The arches at night</span></button>
+    <button type="button" style="--r:1.1933" data-full="img/own-aasraa.jpg" data-cap="At the Aasraa Trust Girls&#x27; Shelter Home (left)."><img src="img/own-aasraa.jpg" alt="Adarsh Raj and a fellow Welham volunteer standing beside the Aasraa Trust Girls&#x27; Shelter Home signs" loading="lazy" decoding="async"><span>At the Aasraa Trust Girls&#x27; Shelter Home (left)</span></button>
+    <button type="button" style="--r:1.8092" data-full="img/own-roshni-first.jpg" data-cap="My first session: working alongside a girl as she assembles her solar lamp (left)."><img src="img/own-roshni-first.jpg" alt="Adarsh Raj watching a girl assemble a small solar lamp at a table of tools and parts" loading="lazy" decoding="async"><span>My first session: working alongside a girl as she assembles her solar lamp (left)</span></button>
+    <i class="br" aria-hidden="true"></i>
+    <button type="button" style="--r:2.6022" data-full="img/own-roshni-group.jpg" data-cap="The girls with the solar lamps they built, and our Welham team behind them."><img src="img/own-roshni-group.jpg" alt="Girls holding the solar lamps they built, with Welham students standing behind them" loading="lazy" decoding="async"><span>The girls with the solar lamps they built, and our Welham team behind them</span></button>
   </div>
 </div></section>
 
 <!-- HONORS -->
 <section id="honors"><div class="wrap">
-  <div class="head"><div class="eyebrow">Honors</div><h2>Recognition at <em>Welham</em></h2></div>
+  <div class="head"><div class="eyebrow">Honors</div><h2>Honors and <em>recognition</em></h2></div>
   <div class="honors">
-    <div class="card honor"><div class="yr">2026</div><div><h3>Best Delegate, DISEC, SelaQui QMUN'26</h3><p>Representing Canada.</p></div></div>
+    <div class="card honor"><div class="yr">2026</div><div><h3>Best Delegate, DISEC, SelaQui QMUN'26</h3><p>Representing Canada, April 2026. Welham also won the Overall Best Delegation trophy.</p></div></div>
     <div class="card honor"><div class="yr">2025</div><div><h3>Certificate of Commendable Contribution, Military History Seminar</h3><p>Commended by Welham in two editions: October 2023 and October 2025.</p></div></div>
     <div class="card honor"><div class="yr">2025</div><div><h3>Distinction Certificate and Bronze Scholar</h3><p>For academic performance in Grade 10.</p></div></div>
     <div class="card honor"><div class="yr">2025</div><div><h3>Selected for the Round Square exchange to Nairobi</h3><p>One of four students chosen from Welham.</p></div></div>
@@ -618,28 +633,35 @@ footer{background:linear-gradient(125deg,#0E2340,#1E2F6B)}
     <article class="card"><span class="pill">Gr 9–10</span><h3 style="margin-top:12px">Varsity Basketball Team</h3><p>All India Golden Jubilee Tournament (2023, 2024), Afzal Khan Memorial, IPSC and the Mayo College U-19 tournament.</p></article>
     <article class="card"><span class="pill">Gr 12</span><h3 style="margin-top:12px">IPSC Swimming Team</h3><p>Competed at the All India IPSC Swimming Championship.</p></article>
   </div>
-  <h3 style="margin-top:32px">State roller skating medals, Uttarakhand</h3>
+  <h3 style="margin-top:32px">State medals in skating and roll ball, Uttarakhand</h3>
   <div class="medals">
     <div class="medal"><div class="dot g" aria-label="Gold">G</div><div><b>Quad 300m · Open</b><span>27th Open State Roller Skating Championship · Oct 2025</span></div></div>
     <div class="medal"><div class="dot s" aria-label="Silver">S</div><div><b>Inline Hockey · Open</b><span>27th Open State Roller Skating Championship · Oct 2025</span></div></div>
     <div class="medal"><div class="dot s" aria-label="Silver">S</div><div><b>Roll Ball · U-17</b><span>3rd Uttarakhand Roll Ball State Championship · Aug 2025</span></div></div>
     <div class="medal"><div class="dot g" aria-label="Gold">G</div><div><b>Roll Ball · U-17</b><span>2nd Uttarakhand State Roll Ball Championship · Oct 2023</span></div></div>
-    <div class="medal"><div class="dot g" aria-label="Gold">G</div><div><b>Roll Ball</b><span>22nd UK Open State Roller Skating Championship · 2023</span></div></div>
+    <div class="medal"><div class="dot g" aria-label="Gold">G</div><div><b>Roll Ball · Junior</b><span>22nd Uttarakhand Open State Roller Skating Championship · 2023</span></div></div>
+  </div>
+  <h3 class="photos-sub">In action</h3>
+  <div class="photos">
+    <button type="button" style="--r:1.3883" data-full="img/own-skating-states.jpg" data-cap="Inline hockey at the state championship (blue team)."><img src="img/own-skating-states.jpg" alt="Inline hockey players in blue and red shirts competing on a covered court" loading="lazy" decoding="async"><span>Inline hockey at the state championship (blue team)</span></button>
+    <button type="button" style="--r:1.6509" data-full="img/own-skating-practice.jpg" data-cap="Inline hockey at Welham (blue)."><img src="img/own-skating-practice.jpg" alt="Welham skaters playing inline hockey on an outdoor rink beside red-roofed school buildings" loading="lazy" decoding="async"><span>Inline hockey at Welham (blue)</span></button>
+    <i class="br" aria-hidden="true"></i>
+    <button type="button" style="--r:2.5943" data-full="img/own-swim.jpg" data-cap="Inter-House Swimming at Welham (red cap)."><img src="img/own-swim.jpg" alt="Swimmers racing backstroke in a pool, one in a red cap" loading="lazy" decoding="async"><span>Inter-House Swimming at Welham (red cap)</span></button>
   </div>
   <p style="color:var(--muted);margin:22px 0 0;font-size:.93rem">Off the clock: a 13,000 ft tandem skydive in Thailand, June 2025.</p>
 </div></section>
 
 <!-- PROOF -->
 <section id="certificates"><div class="wrap">
-  <div class="head"><div class="eyebrow">Certificates</div><h2>The paper <em>trail</em></h2><p>Scans of the certificates behind the honors and medals on this page. Tap any one to see it in full.</p></div>
+  <div class="head"><div class="eyebrow">Certificates</div><h2>The paper <em>trail</em></h2><p>Scanned certificates for the awards and medals on this page. Select any one to see it in full.</p></div>
   <div class="gallery">
-    <button type="button" data-full="qmun-best-delegate-2026.jpg" data-cap="Best Delegate, DISEC. SelaQui QMUN'26 · 2026."><img src="qmun-best-delegate-2026-thumb.jpg" alt="Certificate: Best Delegate, DISEC, SelaQui QMUN'26 · 2026" loading="lazy" decoding="async"><span><b>Best Delegate, DISEC</b>SelaQui QMUN'26 · 2026</span></button>
+    <button type="button" data-full="qmun-best-delegate-2026.jpg" data-cap="Best Delegate, DISEC. SelaQui QMUN'26 · Apr 2026."><img src="qmun-best-delegate-2026-thumb.jpg" alt="Certificate: Best Delegate, DISEC, SelaQui QMUN'26 · Apr 2026" loading="lazy" decoding="async"><span><b>Best Delegate, DISEC</b>SelaQui QMUN'26 · Apr 2026</span></button>
     <button type="button" data-full="ashoka-2026.jpg" data-cap="Certificate of Completion. Ashoka University Young Scholars Programme · June 2026."><img src="ashoka-2026-thumb.jpg" alt="Certificate: Certificate of Completion, Ashoka University Young Scholars Programme · June 2026" loading="lazy" decoding="async"><span><b>Certificate of Completion</b>Ashoka University Young Scholars Programme · June 2026</span></button>
     <button type="button" data-full="open-state-skating-2025.jpg" data-cap="Gold, Quad 300m; Silver, Inline Hockey. 27th Open State Roller Skating Championship · Oct 2025."><img src="open-state-skating-2025-thumb.jpg" alt="Certificate: Gold, Quad 300m; Silver, Inline Hockey, 27th Open State Roller Skating Championship · Oct 2025" loading="lazy" decoding="async"><span><b>Gold, Quad 300m; Silver, Inline Hockey</b>27th Open State Roller Skating Championship · Oct 2025</span></button>
     <button type="button" data-full="military-history-2025.jpg" data-cap="Commendable Contribution. Military History Seminar, Welham · Oct 2025."><img src="military-history-2025-thumb.jpg" alt="Certificate: Commendable Contribution, Military History Seminar, Welham · Oct 2025" loading="lazy" decoding="async"><span><b>Commendable Contribution</b>Military History Seminar, Welham · Oct 2025</span></button>
     <button type="button" data-full="rollball-silver-2025.jpg" data-cap="Silver, Roll Ball U-17. 3rd Uttarakhand Roll Ball State Championship · Aug 2025."><img src="rollball-silver-2025-thumb.jpg" alt="Certificate: Silver, Roll Ball U-17, 3rd Uttarakhand Roll Ball State Championship · Aug 2025" loading="lazy" decoding="async"><span><b>Silver, Roll Ball U-17</b>3rd Uttarakhand Roll Ball State Championship · Aug 2025</span></button>
     <button type="button" data-full="rollball-gold-2023.jpg" data-cap="Gold, Roll Ball U-17. 2nd Uttarakhand State Roll Ball Championship · Oct 2023."><img src="rollball-gold-2023-thumb.jpg" alt="Certificate: Gold, Roll Ball U-17, 2nd Uttarakhand State Roll Ball Championship · Oct 2023" loading="lazy" decoding="async"><span><b>Gold, Roll Ball U-17</b>2nd Uttarakhand State Roll Ball Championship · Oct 2023</span></button>
-    <button type="button" data-full="uk-open-rollball-2023.jpg" data-cap="Gold, Roll Ball. 22nd UK Open State Roller Skating Championship · 2023."><img src="uk-open-rollball-2023-thumb.jpg" alt="Certificate: Gold, Roll Ball, 22nd UK Open State Roller Skating Championship · 2023" loading="lazy" decoding="async"><span><b>Gold, Roll Ball</b>22nd UK Open State Roller Skating Championship · 2023</span></button>
+    <button type="button" data-full="uk-open-rollball-2023.jpg" data-cap="Gold, Roll Ball. 22nd Uttarakhand Open State Roller Skating Championship · 2023."><img src="uk-open-rollball-2023-thumb.jpg" alt="Certificate: Gold, Roll Ball, 22nd Uttarakhand Open State Roller Skating Championship · 2023" loading="lazy" decoding="async"><span><b>Gold, Roll Ball</b>22nd Uttarakhand Open State Roller Skating Championship · 2023</span></button>
     <button type="button" data-full="military-history-2023.jpg" data-cap="Commendable Contribution. Military History Seminar, Welham · Oct 2023."><img src="military-history-2023-thumb.jpg" alt="Certificate: Commendable Contribution, Military History Seminar, Welham · Oct 2023" loading="lazy" decoding="async"><span><b>Commendable Contribution</b>Military History Seminar, Welham · Oct 2023</span></button>
     <button type="button" data-full="south-asian-karate-2019.jpg" data-cap="Third place, Kata. 3rd South Asian Karate-Do Championship · Jan 2019."><img src="south-asian-karate-2019-thumb.jpg" alt="Certificate: Third place, Kata, 3rd South Asian Karate-Do Championship · Jan 2019" loading="lazy" decoding="async"><span><b>Third place, Kata</b>3rd South Asian Karate-Do Championship · Jan 2019</span></button>
     <button type="button" data-full="all-guwahati-karate-2018.jpg" data-cap="First place, Kumite. All Guwahati Karate-Do Championship · Oct 2018."><img src="all-guwahati-karate-2018-thumb.jpg" alt="Certificate: First place, Kumite, All Guwahati Karate-Do Championship · Oct 2018" loading="lazy" decoding="async"><span><b>First place, Kumite</b>All Guwahati Karate-Do Championship · Oct 2018</span></button>
@@ -661,6 +683,24 @@ footer{background:linear-gradient(125deg,#0E2340,#1E2F6B)}
       <div class="medal"><div class="dot b" aria-label="Bronze">3</div><div><b>All Kamrup Karate-Do Championship</b><span>Third place, my first podium · May 2017</span></div></div>
       <div class="medal"><div class="dot s" aria-label="Silver">S</div><div><b>SOF International Mathematics Olympiad</b><span>School-level silver, back to back · 2018 & 2019</span></div></div>
     </div>
+  </div>
+</div></section>
+
+<!-- CAMPUS -->
+<section id="campus"><div class="wrap">
+  <div class="head"><div class="eyebrow">Campus</div><h2>Welham, <em>Dehradun</em></h2><p>My school since Grade 8, in the Doon Valley.</p></div>
+  <div class="photos">
+    <button type="button" style="--r:4.0" data-full="img/photo-welham.jpg" data-cap="Welham Boys&#x27; School, Dehradun."><img src="img/photo-welham.jpg" alt="The red-brick main building of Welham Boys&#x27; School in Dehradun, framed by trees under a blue sky" loading="lazy" decoding="async"><span>Welham Boys&#x27; School, Dehradun</span></button>
+    <i class="br" aria-hidden="true"></i>
+    <button type="button" style="--r:0.683" data-full="img/campus-art.jpg" data-cap="The Welham Art School wall."><img src="img/campus-art.jpg" alt="A brick wall painted with murals and the words Welham Art School, under a clear blue sky" loading="lazy" decoding="async"><span>The Welham Art School wall</span></button>
+    <button type="button" style="--r:0.687" data-full="img/campus-avenue.jpg" data-cap="A tree-lined avenue on campus."><img src="img/campus-avenue.jpg" alt="A paved avenue lined with tall trees, their trunks painted white, leading to a school building" loading="lazy" decoding="async"><span>A tree-lined avenue on campus</span></button>
+    <button type="button" style="--r:0.603" data-full="img/campus-gulmohar.jpg" data-cap="Gulmohar in bloom in a campus courtyard."><img src="img/campus-gulmohar.jpg" alt="A gulmohar tree with red flowers shading a courtyard with green benches, in front of a red-brick building" loading="lazy" decoding="async"><span>Gulmohar in bloom in a campus courtyard</span></button>
+    <button type="button" style="--r:1.0931" data-full="img/campus-ground.jpg" data-cap="The main building across the playing field."><img src="img/campus-ground.jpg" alt="A long red-brick school building across a grass playing field under a wide cloudy sky" loading="lazy" decoding="async"><span>The main building across the playing field</span></button>
+    <i class="br" aria-hidden="true"></i>
+    <button type="button" style="--r:1.4948" data-full="img/campus-dusk.jpg" data-cap="Dusk over the campus rooftops."><img src="img/campus-dusk.jpg" alt="Red rooftops and trees on campus under a cloudy evening sky" loading="lazy" decoding="async"><span>Dusk over the campus rooftops</span></button>
+    <button type="button" style="--r:1.4903" data-full="img/campus-field.jpg" data-cap="Sunset over the playing fields."><img src="img/campus-field.jpg" alt="The sun setting behind tall trees at the edge of a playing field" loading="lazy" decoding="async"><span>Sunset over the playing fields</span></button>
+    <i class="br" aria-hidden="true"></i>
+    <button type="button" style="--r:3.7037" data-full="img/campus-arches.jpg" data-cap="The arches at night."><img src="img/campus-arches.jpg" alt="A black-and-white night photograph of a long building with a row of pointed arches" loading="lazy" decoding="async"><span>The arches at night</span></button>
   </div>
 </div></section>
 
@@ -709,7 +749,7 @@ footer{background:linear-gradient(125deg,#0E2340,#1E2F6B)}
   function close(){lb.hidden=true;im.removeAttribute('src');if(last)last.focus();}
   lb.addEventListener('click',function(e){if(e.target===lb||e.target.closest('.x'))close();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!lb.hidden)close();});
-  document.querySelectorAll('.gallery button, .photos button').forEach(function(b){b.addEventListener('click',function(){open(b.dataset.full,b.dataset.cap);});});
+  document.querySelectorAll('.gallery button, .photos button, .press button').forEach(function(b){b.addEventListener('click',function(){open(b.dataset.full,b.dataset.cap);});});
   document.querySelectorAll('.mag').forEach(function(b){
     var ok=false,i=new Image();i.onload=function(){ok=true;var c=b.querySelector('.cv');i.alt=b.dataset.cap;c.appendChild(i);};i.src=b.dataset.cover;
     b.addEventListener('click',function(){open(ok?b.dataset.cover:'',b.dataset.cap,b.dataset.link,ok?'':'<div class="mags" style="grid-template-columns:200px;justify-content:center;margin:0"><div class="mag"><div class="cv" style="'+b.querySelector('.cv').getAttribute('style')+'">'+b.querySelector('b').textContent+'</div></div></div>');});
