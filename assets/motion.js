@@ -64,18 +64,6 @@
     Object.keys(map).forEach(function(id){spy.observe(d.getElementById(id));});
   }
 
-  /* Ticker of themes, home page only */
-  var cover=d.querySelector('main > .wrap:first-child');
-  if(cover&&d.getElementById('impact')&&d.querySelector('.hero .portrait')){
-    var items=['Sociology','Organizational leadership','Family business succession','Affordable housing',"India’s Tier-II cities",'Published research','Model United Nations','Roshni Ki Udaan'];
-    var cols=['#0F766E','#4338CA','#B45309','#BE123C','#15803D','#6D28D9'];
-    var half='';
-    items.forEach(function(t,i){half+='<span'+(i%2?' class="it"':'')+'>'+t+'</span><i style="--c:'+cols[i%cols.length]+'"></i>';});
-    var tk=d.createElement('div');tk.className='m-ticker';tk.setAttribute('aria-hidden','true');
-    tk.innerHTML='<div class="m-track">'+half+half+'</div>';
-    cover.parentNode.insertBefore(tk,cover.nextSibling);
-  }
-
   /* Section titles: mark when seen so the underline sweeps in */
   var heads=d.querySelectorAll('section .head h2');
 
